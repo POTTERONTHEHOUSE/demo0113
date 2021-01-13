@@ -111,11 +111,11 @@
     <!-- Header -->
     <header class="viewport" style=" margin-top: -20">
         <div class="container">
-            <!-- <div class="row">
+            <div class="row">
                 <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
                     <img class="img-responsive img-centered" src="{{url_for('static',filename="/images/CRDB.png")}}" alt="ATOM">
                 </div>
-            </div> -->
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="intro-text">
@@ -446,14 +446,21 @@
 
                                 <caption>Evaluation Phase</caption>
                                 <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">State</th>
-                                    <th scope="col">Workload</th>
-                                    <th scope="col">I/O util%</th>
-                                    <th scope="col">Time Cost</th>
-                                    <th scope="col">Accumulated Time Cost</th>
-
-                                </tr>
+                                    <tr>
+                                        <th scope="col">State</th>
+                                        <th scope="col">Workload</th>
+                                        <th scope="col">maxHWM</th>
+                                        <th scope="col">maxRSS</th>
+                                        <th scope="col">Time Cost</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</th>
+                                        <th scope="col">8192</th>
+                                        <th scope="col">15388109 </th>
+                                        <th scope="col">7481158</th>
+                                        <th scope="col">2067</th>
+                                    </tr>
+                                    
                                 </thead>
                                 <tbody id="table-body_graphd_eval">
                                 </tbody>
@@ -464,195 +471,19 @@
 
                                 <caption>Evaluation Phase</caption>
                                 <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">State</th>
-                                    <th scope="col">Workload</th>
-                                    <th scope="col">RAM HWM</th>
-                                    <th scope="col">RAM RSS</th>
-                                    <th scope="col">Time Cost</th>
-                                    <th scope="col">Accumulated Time Cost</th>
-
-                                </tr>
-                                </thead>
-                                <tbody id="table-body_pregelplus_eval">
-                                </tbody>
-                            </table>
-
-                        </div>
-                    </div>
-                    </div>
-                <!-- <div class="col-md-9 col-lg-9 col-xs-9">
-                    <div class="row" >
-                    <div id="training_table">
-
-                                    <table class="table-fill" id="result-table11" style="display: table;">
-
-                                            <caption>Training Phase</caption>
-                                        <thead class="thead-light">
-                                        <tr>
-                                            <th scope="col">State</th>
-                                            <th scope="col">Workload</th>
-                                            <th scope="col">I/O util%</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch1</th>
-                                            <th scope="col">16</th>
-                                            <th scope="col">4.85</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch2</th>
-                                            <th scope="col">32</th>
-                                            <th scope="col">5.2975</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch3</th>
-                                            <th scope="col">64</th>
-                                            <th scope="col">7.05</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch4</th>
-                                            <th scope="col">128</th>
-                                            <th scope="col">4.7975</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch5</th>
-                                            <th scope="col">256</th>
-                                            <th scope="col">4.0475</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch6</th>
-                                            <th scope="col">512</th>
-                                            <th scope="col">5.2475</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch7</th>
-                                            <th scope="col">1024</th>
-                                            <th scope="col">5.0975</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch8</th>
-                                            <th scope="col">2048</th>
-                                            <th scope="col">23.4</th>
-                                        </tr>
-
-                                        </thead>
-                                        <tbody id="table-body_graphd_tra">
-                                        </tbody>
-                                    </table>
-
-
-                                    <table class="table-fill" id="result-table12" style="display: none;">
-
-                                        <caption>Training Phase</caption>
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <th scope="col">State</th>
-                                            <th scope="col">Workload</th>
-                                            <th scope="col">maxHWM</th>
-                                            <th scope="col">maxRSS</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch1</th>
-                                            <th scope="col">32</th>
-                                            <th scope="col">131566</th>
-                                            <th scope="col">125213</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch2</th>
-                                            <th scope="col">64</th>
-                                            <th scope="col">214379</th>
-                                            <th scope="col">196790</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch3</th>
-                                            <th scope="col">128</th>
-                                            <th scope="col">383154</th>
-                                            <th scope="col">320201</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch4</th>
-                                            <th scope="col">256</th>
-                                            <th scope="col">682624</th>
-                                            <th scope="col">464078</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch5</th>
-                                            <th scope="col">512</th>
-                                            <th scope="col">1152704</th>
-                                            <th scope="col">745627</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch6</th>
-                                            <th scope="col">1024</th>
-                                            <th scope="col">2064403</th>
-                                            <th scope="col">1225367</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch7</th>
-                                            <th scope="col">2048</th>
-                                            <th scope="col">3984616</th>
-                                            <th scope="col">2070943</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="table-body_pregelplus_tra">
-                                    </tbody>
-                                </table>
-
-                        </div>
-
-
-                    </div>
-
-                    <div class="row">
-                        <div id="evaluation_table">
-
-
-                                <table class="table-fill" id="result-table21" style="display: table;">
-
-                                        <caption>Evaluation Phase</caption>
-                                    <thead class="thead-light">
-                                        <tr>
-                                            <th scope="col">State</th>
-                                            <th scope="col">Workload</th>
-                                            <th scope="col">I/O util%</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch7</th>
-                                            <th scope="col">4096</th>
-                                            <th scope="col">100.2</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="col">Batch8</th>
-                                            <th scope="col">16</th>
-                                            <th scope="col">5.2475</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="table-body_graphd_eval">
-                                    </tbody>
-                                </table>
-
-
-                                <table class="table-fill" id="result-table22" style="display: none;">
-
-                                    <caption>Evaluation Phase</caption>
-                                <thead class="thead-light">
                                     <tr>
                                         <th scope="col">State</th>
                                         <th scope="col">Workload</th>
                                         <th scope="col">maxHWM</th>
                                         <th scope="col">maxRSS</th>
+                                        <th scope="col">Time Cost</th>
                                     </tr>
                                     <tr>
-                                        <th scope="col">Batch7</th>
-                                        <th scope="col">7755</th>
-                                        <th scope="col">14654785</th>
-                                        <th scope="col">7058935</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch8</th>
-                                        <th scope="col">2485</th>
-                                        <th scope="col">14654785</th>
-                                        <th scope="col">8124202</th>
+                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</th>
+                                        <th scope="col">8192</th>
+                                        <th scope="col">15388109 </th>
+                                        <th scope="col">7481158</th>
+                                        <th scope="col">2067</th>
                                     </tr>
                                 </thead>
                                 <tbody id="table-body_pregelplus_eval">
@@ -661,17 +492,8 @@
 
                         </div>
                     </div>
-
-
-                    </div>-->
-
-
-
-
-
-
-
-
+                    </div>
+                
                 <hr>
 
             </div>

@@ -7,7 +7,7 @@
  rocks=0;
  i=0;
  j=0;
- xworkload = 10240;
+ xworkload = 8192;
 
 //datset
 
@@ -262,19 +262,19 @@ function showalg2(){
 function toggleclusize(){
     xworkload = Number(document.getElementById("workload").value);
     y = Number(document.getElementById("clusizeresult").value);
-     if (isNaN(xworkload) || xworkload < 1 || (xworkload > 1302 && y==1)) {
+     if (isNaN(xworkload) || xworkload < 1 || (xworkload > 1024 && y==1)) {
       window.alert("Illegal workload! Please enter again!");
       xworkload =0;
      } 
-     else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 2605 && y==2)) {
+     else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 2048 && y==2)) {
       window.alert("Illegal workload! Please enter again!");
       xworkload =0;
      }
-      else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 5210 && y==4)) {
+      else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 4096 && y==4)) {
       window.alert("Illegal workload! Please enter again!");
       xworkload =0;
      }
-      else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 10240 && y==8)) {
+      else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 8192 && y==8)) {
       window.alert("Illegal workload! Please enter again!");
       xworkload =0;
      }
@@ -400,7 +400,9 @@ function checkworkload(){
 function checkbatchnumber() {
   var x = new Number;
   x = Number(document.getElementById("userbatchnumber").value);
-  if (isNaN(x) || x < 1 || x > document.getElementById("workload").value) {window.alert("Illegal workload! Please enter again!");} else {
+  if (isNaN(x) || x < 1 || x > document.getElementById("workload").value) {
+      window.alert("Illegal workload! Please enter again!");
+    } else {
       //window.alert("Success");
       generate_batch_inputs(x);
   }
@@ -622,77 +624,6 @@ function add_batch() {
     draw_batch(batch_array);
 }
 
-// function rockit(){
-
-// //determine if the input of the workload is legal
-//   if (xworkload==0){
-//       window.alert("Illegal workload! Please enter the workload again!");
-//       return;
-//   }
-
-//       //Delete the items in the table created by the last rockit
-//       if (rocks>0){
-//         $( "#table-body_pregelplus_tra tr" ).remove();
-//         $( "#table-body_pregelplus_eval tr" ).remove();
-//         $( "#table-body_graphd_tra tr" ).remove();
-//         $( "#table-body_graphd_eval tr" ).remove();
-//         i = 0;
-//         j = 0;
-//         init_timestamp = timestamp;
-//       }
-
-//         //show the loading icon for the first time
-//         var trx = $('<tr id="pending-row">' + '<td>' + '<img src="/static/images/load2.gif"/>' +  '</td><td>'  + '</td><td>' +  '</td><td>' +  '</td><td>' +  '</td><td>' + '</td></tr>');
-//         if(document.getElementById("chsys").value=="graphd"){
-//           $("#table-body_graphd_tra").append(trx);
-//           //$("#table-body_graphd_tra tr:first").append($('<img src="/static/images/load2.gif"/>'));
-
-//          }else if(document.getElementById("chsys").value=="pregelplus"){
-//           //$("#table-body_pregelplus_tra tr:first").append($('<img src="/static/images/load2.gif"/>'));
-//           $("#table-body_pregelplus_tra").append(trx);
-
-//          }
-
-
-//       var x = Math.floor(Math.random() * 1000000000);
-//       //post parameters to the server
-//      $.ajax({
-       
-//       url:'http://localhost:80/start_task',
-//       async:false,//for the return value
-//       type:'POST',
-//       contentType: "application/json",
-//       data:JSON.stringify({
-//         "dataset":document.getElementById("chdataset").value,
-//         "workload":parseInt(document.getElementById("workload").value),
-//         "algorithm":document.getElementById("chalg").value,
-//         "num_of_machines":document.getElementById("clusizeresult").value,
-//         "system":document.getElementById("chsys").value,
-//         "uuid":x,
-//       }),
-      
-//       success : function(data){
-            
-//             if (data.result.status!="Okay"){
-//               alert(data.result.status);
-//               return;
-//             }
-            
-//             var i=1;
-//             timestamp=Date.now()/1000;
-//             init_timestamp = timestamp;
-//             while(phase!="end"){
-//              // setTimeout(function(){function1(x)},1000*i);
-//              function1(x)
-//              i++;
-//             }
-//             $("#pending-row").remove();
-//           },
-
-//     })
-
-
-// }
 
 
 
@@ -802,7 +733,7 @@ function init_all() {
 
         $('#chalg')[0].selectedIndex = 1;
 
-        $('#workload')[0].value= 10240;
+        $('#workload')[0].value= 8192;
 
         $('#clusizeresult')[0].selectedIndex = 3;
         $('#clusizeresult').trigger('onchange');

@@ -23,6 +23,14 @@ def index():
 def index_2():
     return render_template('index_2.html')
 
+@app.route('/statictables', methods=['GET'])
+def statictables():
+    return render_template('statictables.html')
+
+@app.route('/statictable', methods=['GET'])
+def statictable():
+    return render_template('statictable.html')
+
 @app.route('/start_task', methods=['POST'])
 def start_task():
     req_data = request.get_json()
