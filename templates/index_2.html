@@ -92,7 +92,7 @@
                       <a href="#people">People</a>
                   </li> -->
                     <li class="page-scroll active">
-                        <a href="/index_2">Auto-Tune</a>
+                        <a href="#interactiveDemo">Auto-Tune</a>
                     </li>
 
                     <!--                     <li class="page-scroll">
@@ -119,7 +119,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="intro-text">
-                        <span class="name">A Self-Designing Key-Value Store</span>
+                        <span class="name">VC-Tune</span>
                     </div>
                 </div>
             </div>
@@ -142,13 +142,12 @@
                 <div class="col-sm-3 text-center">
 
                     <i class="fa fa-cogs fa-5x" aria-hidden="true"></i>
-                    <p class="text-center">Self-design</p>
+                    <p class="text-center">Automatic Suggestions</p>
                 </div>
                 <div class="col-sm-9">
 
                     <!-- <p>CrimsonDB is a new <em>plug and play</em> key-value store. It offers optimal reads and writes given a memory budget and an application workload. CrimsonDB decides autonomously how to change its core design to adjust to workload, hardware and other parameters.</p> -->
-                    <p>CrimsonDB decides autonomously how to change its core design to adjust to workload, hardware and other parameters. It can assume arbitrary shapes in between the core design classes of log, LSM-tree, B-tree, and their hybrids. It offers
-                        optimal reads and writes given a memory budget and an application workload. </p>
+                    <p>Exhausted when picking a suitable task fragmentation with VC- Systems? VC-Tune is here to help you. VC-Tune enables easy exploration of different task fragmentations schemes in a simple, online, and interactive manner. VC-Tune can also give you a direct suggestion of a suitable task fragmentation scheme.  </p>
                 </div>
             </div>
 
@@ -156,13 +155,12 @@
                 <div class="col-sm-3 text-center">
 
                     <i class="fa fa-tachometer fa-5x" aria-hidden="true"></i>
-                    <p class="text-center">Performance</p>
+                    <p class="text-center">Plenty of Interaction</p>
                 </div>
                 <div class="col-sm-9">
 
                     <!-- <p>We build CrimsonDB by <em>mapping</em> the whole possible design space of key-value stores which allows us to discover key design optimizations. Through them we push read and write performance towards the optimal behavior while at the same time discover the rules that govern automation.</p> -->
-                    <p>We build CrimsonDB by mapping the whole possible design space of key-value stores. This allows us to discover new designs and optimizations. Through them we push read and write performance towards the optimal behavior, while at the
-                        same time discover the rules that govern automation.</p>
+                    <p>A user can fully interact with VC-Tune to get an intuition of the best task fragmentation schemes, depending on various user specified settings.</p>
                 </div>
             </div>
 
@@ -170,13 +168,12 @@
                 <div class="col-sm-3 text-center">
 
                     <i class="fa fa-question fa-5x" aria-hidden="true"></i>
-                    <p class="text-center">What if?</p>
+                    <p class="text-center">Easy Extension</p>
                 </div>
                 <div class="col-sm-9">
                     <!-- <p>
                   CrimsonDB offers advanced system design exploration properties such as <em>allowing to argue about hardware properties and the potential benefit when adding new hardware</em> or <em>what kind of hardware would bring a required performance property for a given workload</em>.</p> -->
-                    <p>CrimsonDB offers advanced system design exploration features such as allowing to reason about hardware properties and the potential benefit when adding new hardware or what kind of low level system design choices would bring a required
-                        performance property for a given workload.</p>
+                    <p>VC-Tune is a prototype system, but it can be very simple to extend to other VC-systems, datasets or real-world tasks, due to its general design.</p>
                 </div>
             </div>
 
@@ -192,399 +189,451 @@
 
     <section id="interactiveDemo">
 
-        <div class="container page-scroll" style="width:2400px; transform: scale(0.8) translateX(-450px);">
-        <div class="row" id="environment_setting">
-            <div class="col-md-1 col-lg-1 col-xs-1"></div>
-            <div class="col-md-2 col-lg-2 col-xs-2 ">
-                <div class="content">
-                    <h3>Environment Setting:</h3>
-                    <p> Set the parameters for dataset, system, algorithm, the cluster size, workload, and the number of batches. After choosing, hit the button below to see it run!</p>
-
-                </div>
-            </div>
-
-            <div class="col-md-9 col-lg-9 col-xs-9">
-                <div class="row">
-
-                    <div class="trigger out_tab" >
-
-                        <div class="tab  tooltip2" id="dataset-trigger">
-                            <div class="row">
-                                <div class="row row1" style="display:inline-block;">
-                                <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/Align.png")}}">
-                                    </span>
-                                <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Dataset:</span>
-                                </div>
-                                <div class="row2" id="datasetcontent" style="display:inline-block;">
-                                    <form role="form">
-                                        <div class="form-group rowwidth">
-                                            <select class="form-control" id="chdataset">
-                                                <option type="radio" name="dataset" id="dataset1" value="web" checked="">WEB</option>
-                                                <option type="radio" name="dataset" id="dataset2" value="dblp" checked="">DBLP</option>
-                                            </select>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <span class="tooltiptext_mode">Choose one from the two datasets.</span>
+        <div class="container page-scroll" style="width:2400px;">
+            
+                <div class="row" id="environment_setting">
+               
+                        <div class="content">
+                            <h3>Environment Setting:</h3>
+                        
                         </div>
-                    </div>
-
-
-                    <div class="trigger out_tab" >
-                        <div class=" tab tooltip2" id="dataset-trigger">
+                 
+                    
+                   
                         <div class="row">
-                        <div id="sys-trigger" style="display:inline-block;">
-                            <div class="row row1">
-                            <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/flow.png")}}"></span>
-                            <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="systext"> Systems:</span>
-                            </div>
-                        </div>
 
-                        <div class="row2" id="syscontent" style="display:inline-block;">
-                        <form role="form">
-                            <div class="form-group">
-
-                                <select class="form-control rowwidth"  onchange="switchtable(this)" id="chsys">
-                                    <option type="radio" name="graphd1" id="graphd11" value="graphd" checked="">GRAPHD</option>
-                                    <option type="radio" name="graphd1" id="graphd12" value="pregelplus" checked=""> PREGELPLUS</option>
-                                </select>
-                            </div>
-                        </form>
-                        </div>
-                        </div>
-                        <span class="tooltiptext_mode">Choose one from the two systems.</span>
-                    </div>
-                    </div>
-
-                    <div class="trigger out_tab">
-                        <div class="tab  tooltip2" id="dataset-trigger">
-                        <div class="row">
-                            <div class="row row1" style="display:inline-block;">
-                            <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/filter.png")}}">
-                                </span>
-                            <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Algorithm:</span>
-                            </div>
-                            <div class="row2" id="algcontent" style="display:inline-block;">
-                                <form role="form">
-                                    <div class="form-group ">
-                                        <select class="form-control rowwidth" id="chalg">
-                                            <option type="radio" name="algo1" id="algo11" value="ppr" checked=""> PPR</option>
-                                            <option type="radio" name="algo1" id="algo12" value="sssp" checked=""> MSSP</option>
-                                        </select>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <span class="tooltiptext_mode">Choose one from the two algorithms.</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="trigger out_tab">
-                        <div class="tab  tooltip2" id="dataset-trigger">
-                            <div class="row row1" style="display:inline-block;">
-                                <div style="display:inline-block;"><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/hhh.png")}}">
-                                </div>
-                                <div style="display:inline-block; cursor: pointer; font-size: 25px; font-weight: bold; vertical-align:top;" id="clusize-text"> Cluster:</div>
-                            </div>
-                            <div class="row2 rowwidth" style="display:inline-block;">
-                                <form role="form">
-                                    <div class="form-group ">
-                                        <select class="form-control" id="clusizeresult">
-                                            <option type="radio" name="machine1" id="machine11" value="1" checked="" onchange="showclusize1()"> 1 machine</option>
-                                            <option type="radio" name="machine1" id="machine12" value="2" checked="" onchange="showclusize1()"> 2 machines</option>
-                                            <option type="radio" name="machine1" id="machine14" value="4" checked="" onchange="showclusize1()"> 4 machines</option>
-                                            <option type="radio" name="machine1" id="machine18" value="8" checked="" onchange="showclusize1()"> 8 machines</option>
-
-                                        </select>
-                                    </div>
-                                </form>
-                            </div>
-                            <span class="tooltiptext_mode">Choose the number of machines.</span>
-                        </div>
-                    </div>
-                    <!--
-                            <div style="display:inline-block;">
-                                <div class="input-group rowwidth" style="left:90px" >
-                                <input type="number" min="1" max="8" class="form-control" style="cursor: pointer; font-size: 25px; font-weight: bold;" id="clusizeresult" value="4">
-                                <span class="input-group-addon">machine(s)</span>
-                                </div>
-                            </div>
-
-                                <span class="tooltiptext_mode">Choose the number of machines.</span>
-                    -->
-
-
-
-                    <div class="trigger out_tab">
-                        <div class="tab  tooltip2" id="dataset-trigger">
-                        <div class="row">
-                        <div class="row1" id="wl-trigger" style="display:inline-block;left: 10px;">
-                            <div class="row">
-                            <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/wl.png")}}"></span>
-                            <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="wl-text"> Workload:</span>
-                            </div>
-                        </div>
-
-                        <div class="row2" id="wlcontent" style="display:inline-block;">
-                            <label class="radio-inline">
-                                <ul class="list-inline">
-                                    <input type="number" id="workload" class="form-control rowwidth" value="2000" onchange="checkworkload()">
-                                </ul>
-                            </label>
-                        </div>
-                        </div>
-                        <span class="tooltiptext_mode">Choose the workload. The workload should be no larger than 4096!</span>
-                        </div>
-                    </div>
-
-                    <div class="trigger out_tab">
-                        <div class="tab  tooltip2" id="dataset-trigger">
-                            <div class="row">
-                                <div class="row1" id="wl-trigger" style="display:inline-block;left: 10px;">
+                            <div class="trigger out_tab" >
+                                
+                                <div class="tab  tooltip2" id="dataset-trigger">
                                     <div class="row">
-                                        <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/memory.png")}}"></span>
-                                        <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="wl-text"> Memory:</span>
+                                        <div class="row row1" style="display:inline-block;">
+                                        <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/Align.png")}}">
+                                            </span>
+                                        <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Dataset:</span> 
+                                        </div>
+                                        <div class="row2" id="datasetcontent" style="display:inline-block;">
+                                            <form role="form">
+                                                <div class="form-group rowwidth">
+                                                    <select class="form-control" id="chdataset">
+                                                        <option type="radio" name="dataset" id="dataset1" value="web" checked="">WEB</option>
+                                                        <option type="radio" name="dataset" id="dataset2" value="dblp" checked="">DBLP</option>
+                                                    </select>	
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div> 
+                                    <span class="tooltiptext_mode">Choose one from the two datasets.</span>
+                                </div>
+                            </div>
+                            
+
+                            <div class="trigger out_tab" >
+                                <div class=" tab tooltip2" id="dataset-trigger">
+                                <div class="row">
+                                <div id="sys-trigger" style="display:inline-block;">
+                                    <div class="row row1">
+                                    <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/flow.png")}}"></span>
+                                    <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="systext"> Systems:</span>
                                     </div>
                                 </div>
 
-                                <div class="row2" id="wlcontent" style="display:inline-block;">
-                                    <label class="radio-inline">
-                                        <ul class="list-inline">
-                                            <input type="number" id="memory" class="form-control rowwidth" value="8192" onchange="draw_batch()">
-                                        </ul>
-                                    </label>
-                                </div>
-                            </div>
-                            <span class="tooltiptext_mode">Setting memory budget</span>
-                        </div>
-                    </div>
-<!--
-                    <div class="trigger out_tab" style="display: none">
-                        <div class="tab  tooltip2" id="dataset-trigger">
-                            <div class="row" id="toatom" style="display: block;">
-                                <div class="row row1" style="left: 10px;">
-                                    <div id="nob-trigger" style="display:inline-block;">
-                                        <div class="row">
-                                        <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/nob.png")}}"></span>
-                                        <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="nob-text"> Batches:</span>
-                                        </div>
+                                <div class="row2" id="syscontent" style="display:inline-block;">
+                                <form role="form">
+                                    <div class="form-group">
+                                        
+                                        <select class="form-control rowwidth"  onchange="switchtable(this)" id="chsys">
+                                            <option selected="selected" type="radio" name="graphd1" id="graphd12" value="pregelplus" checked=""> PREGELPLUS</option>
+                                            <option type="radio" name="graphd1" id="graphd11" value="graphd" checked="">GRAPHD</option>
+
+                                            <option type="radio" name="graphd1" id="graphd12" value="pregelplus" checked="">GIRAPH</option>
+                                        </select>	
                                     </div>
-                                    <div id="atomcontent" class="row2" style="display:inline-block;left: 173px;">
+                                </form>
+                                </div>
+                                </div>
+                                <span class="tooltiptext_mode">Choose one from the two systems.</span>
+                            </div>
+                            </div>
+            
+                            <div class="trigger out_tab">
+                                <div class="tab  tooltip2" id="dataset-trigger">
+                                <div class="row">
+                                    <div class="row row1" style="display:inline-block;">
+                                    <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/filter.png")}}">
+                                        </span>
+                                    <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Algorithm:</span> 
+                                    </div>
+                                    <div class="row2" id="algcontent" style="display:inline-block;">
                                         <form role="form">
-                                            <div class="form-group rowwidth">
-                                                <select class="form-control" onchange="switchatom()" id="enatom">
-                                                    <option type="radio" name="dataset" id="dataset1" value="Enable" checked="">Enable ATOM</option>
-                                                    <option type="radio" name="dataset" id="dataset2" value="Disable" checked="">Disable ATOM</option>
-                                                </select>
+                                            <div class="form-group ">
+                                                <select class="form-control rowwidth" id="chalg">
+                                                    <option type="radio" name="algo1" id="algo11" value="mssp" checked=""> MSSP</option>
+                                                    <option type="radio" name="algo1" id="algo12" value="ppr" checked=""> PPR</option>
+                                                </select>	
                                             </div>
                                         </form>
                                     </div>
+                                </div> 
+                                <span class="tooltiptext_mode">Choose one from the two algorithms.</span>
                                 </div>
-                                <span class="tooltiptext_mode">Choose the number of batches! Enable ATOM and run our automatic program or input batch number manually.</span>
                             </div>
 
-                            <div class="row spinicon" id="tomanual" style="display: none;">
-                                <div class="row row1" style="left: 10px;">
-                                    <div id="nob-trigger" style="display:inline-block;">
-                                        <div class="row">
-                                            <span><img class="img-responsive img-centered" onclick="switchmanual()" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/nob.png")}}"></span>
-                                            <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="nob-text"> Batches:</span>
+                        </div>
+
+                        <div class="row">
+                        
+                            <div class="trigger out_tab">
+                                <div class="tab  tooltip2" id="dataset-trigger">
+                                    <div class="row row1" style="display:inline-block;">
+                                    <div style="display:inline-block;"><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/hhh.png")}}">
+                                    </div>
+                                    <div style="display:inline-block; cursor: pointer; font-size: 25px; font-weight: bold; vertical-align:top;" id="clusize-text"> Cluster:</div>
+                                    </div> 
+                                    <div class="row2 rowwidth" style="display:inline-block;">
+                                            <form role="form">
+                                                <div class="form-group ">
+                                                    <select class="form-control" id="clusizeresult" onchange="toggleclusize()">
+                                                        <option type="radio" name="machine1" id="machine11" value="1" checked="" onchange="showclusize1()"> 1 machine</option>
+                                                        <option type="radio" name="machine1" id="machine12" value="2" checked="" onchange="showclusize1()"> 2 machines</option>
+                                                        <option type="radio" name="machine1" id="machine14" value="4" checked="" onchange="showclusize1()"> 4 machines</option>
+                                                        <option type="radio" name="machine1" id="machine18" value="8" checked="" onchange="showclusize1()"> 8 machines</option>
+                                                    
+                                                    </select>	
+                                                </div>  
+                                            </form>
+                                    </div>
+                                    <span class="tooltiptext_mode">Choose the number of machines.</span>
+                                </div>
+                            </div>
+                            
+
+                            <div class="trigger out_tab">
+                                <div class="tab  tooltip2" id="dataset-trigger">
+                                <div class="row">
+                                <div class="row1" id="wl-trigger" style="display:inline-block;left: 10px;">
+                                    <div class="row">
+                                    <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/wl.png")}}"></span>
+                                    <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="wl-text"> Workload:</span>
+                                    </div>
+                                </div>
+                            
+                                <div class="row2" id="wlcontent" style="display:inline-block;">
+                                    <label class="radio-inline">
+                                        <ul class="list-inline">
+                                            <input type="number" id="workload" class="form-control rowwidth" value="10240" onchange="checkworkload()">
+                                        </ul>
+                                    </label>
+                                </div>
+                                </div>
+                                <span class="tooltiptext_mode">Input the workload. The workload should be no larger than the upper bound!</span>
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            </div>
+                            <div class="trigger out_tab">
+                                <div class="tab  tooltip2" id="dataset-trigger">
+                                    <div class="row" id="toatom" style="display: block;">
+                                        <div class="row row1" style="left: 10px;">
+                                            <div id="nob-trigger" style="display:inline-block;">
+                                                <div class="row">
+                                                <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/nob.png")}}"></span>
+                                                <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="nob-text"> Batches:</span>
+                                                </div>
+                                            </div>
+                                            <div id="atomcontent" class="row2" style="display:inline-block;left: 173px;">
+                                                <form role="form">
+                                                    <div class="form-group rowwidth">
+                                                        <select class="form-control" onchange="switchatom()" id="enatom">
+                                                            <option type="radio" name="dataset" id="at1" value="Enable" checked="">Enable ATOM</option>
+                                                            <option type="radio" name="dataset" id="at2" value="Disable" checked="">Disable ATOM</option>
+                                                        </select>	
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
+                                        <span class="tooltiptext_mode">Choose the number of batches! Enable VC-Tune and run our automatic program or input batch number manually.</span>
                                     </div>
-                                    <div class="row2" id="manuatom" style="display:inline-block;left: 173px;">
-                                        <input type="number" min="1" id="userbatchnumber" class="form-control rowwidth" value="4" onchange="checkbatchnumber()">
+
+                                    <div class="row spinicon" id="tomanual" style="display: none;">
+                                        <div class="row row1" style="left: 10px;">
+                                            <div id="nob-trigger" style="display:inline-block;">
+                                                <div class="row">
+                                                    <span><img class="img-responsive img-centered" onclick="switchmanual()" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/nob.png")}}"></span>
+                                                    <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="nob-text"> Batches:</span>
+                                                </div>
+                                            </div>
+                                            <div class="row2" id="manuatom" style="display:inline-block;left: 173px;">
+                                                <input type="number" min="1" id="userbatchnumber" class="form-control rowwidth" value="10" onchange="checkbatchnumber()">
+                                            </div>  
+                                        </div>
+                                        <span class="tooltiptext_mode">Input the number of batches manually! Click the icon and you can switch back to ATOM!</span>
                                     </div>
-                                </div>
-                                <span class="tooltiptext_mode">Input the number of batches manually! Click the icon and you can switch back to ATOM!</span>
                             </div>
-                    </div>
-                    </div>
-                    -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="buttonlong button4" onclick="rockit()">Click Here and Run!</button>
+                   
+                    </div> 
                 </div>
-
-            </div>
-        </div>
-
+            
+        
 
 
 
 
 
-        <div class="row" id="part_1">
-            <div class="row">
-                <button type="button" class="buttonlong button4" onclick="rockit()" style=" width:500px; left: calc(50% - 250px);">Click Here and Run!</button>
-            </div>
-            <div class="col-md-1 col-lg-1 col-xs-1"></div>
-            <div class="col-md-2 col-lg-2 col-xs-2 ">
-                <div class="content">
-                    <h3>Results from Training and Testing:</h3>
-                    <p> Here we show metrics from the training and evaluationg phases corresponding to the above environment parameter setting.</p>
+     
+            <div class="row" id="part_1">
+               
+                    <div class="content">
+                        <h3>Results from Training and Testing:</h3>
+                        
+                    </div>
+                    <div class="row" >
+                        <div id="training_table">
 
-                    </ul>
-                </div>
+                            <table class="table-fill" id="result-table11" style="display: table;">
+
+                                <caption>Training Phase</caption>
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">State</th>
+                                    <th scope="col">Workload</th>
+                                    <th scope="col">I/O util%</th>
+                                    <th scope="col">Time Cost</th>
+                                    <th scope="col">Accumulated Time Cost</th>
+
+                                </tr>
+                                </thead>
+                                <tbody id="table-body_graphd_tra">
+                                </tbody>
+                            </table>
 
 
-            </div>
+                            <table class="table-fill" id="result-table12" style=" display: none;">
 
-            <div class="col-md-9 col-lg-9 col-xs-9">
-                <div class="row" >
+                                <caption>Training Phase</caption>
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">State</th>
+                                    <th scope="col">Workload</th>
+                                    <th scope="col">RAM HWM</th>
+                                    <th scope="col">RAM RSS</th>
+                                    <th scope="col">Time Cost</th>
+                                    <th scope="col">Accumulated Time Cost</th>
+
+                                </tr>
+                                </thead>
+                                <tbody id="table-body_pregelplus_tra">
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+                        <div id="evaluation_table">
+
+
+                            <table class="table-fill" id="result-table21" style=" display: table;">
+
+                                <caption>Evaluation Phase</caption>
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">State</th>
+                                    <th scope="col">Workload</th>
+                                    <th scope="col">I/O util%</th>
+                                    <th scope="col">Time Cost</th>
+                                    <th scope="col">Accumulated Time Cost</th>
+
+                                </tr>
+                                </thead>
+                                <tbody id="table-body_graphd_eval">
+                                </tbody>
+                            </table>
+
+
+                            <table class="table-fill" id="result-table22" style=" display: none;">
+
+                                <caption>Evaluation Phase</caption>
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">State</th>
+                                    <th scope="col">Workload</th>
+                                    <th scope="col">RAM HWM</th>
+                                    <th scope="col">RAM RSS</th>
+                                    <th scope="col">Time Cost</th>
+                                    <th scope="col">Accumulated Time Cost</th>
+
+                                </tr>
+                                </thead>
+                                <tbody id="table-body_pregelplus_eval">
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                <!-- <div class="col-md-9 col-lg-9 col-xs-9">
+                    <div class="row" >
                     <div id="training_table">
 
-                        <table class="table-fill" id="result-table11" style="display: table;">
+                                    <table class="table-fill" id="result-table11" style="display: table;">
 
-                            <caption>Training Phase</caption>
-                            <thead class="thead-light">
-                            <tr>
-                                <th scope="col">State</th>
-                                <th scope="col">Workload</th>
-                                <th scope="col">I/O util%</th>
-                                <th scope="col">Time Cost</th>
-                                <th scope="col">Accumulated Time Cost</th>
+                                            <caption>Training Phase</caption>
+                                        <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col">State</th>
+                                            <th scope="col">Workload</th>
+                                            <th scope="col">I/O util%</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch1</th>
+                                            <th scope="col">16</th>
+                                            <th scope="col">4.85</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch2</th>
+                                            <th scope="col">32</th>
+                                            <th scope="col">5.2975</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch3</th>
+                                            <th scope="col">64</th>
+                                            <th scope="col">7.05</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch4</th>
+                                            <th scope="col">128</th>
+                                            <th scope="col">4.7975</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch5</th>
+                                            <th scope="col">256</th>
+                                            <th scope="col">4.0475</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch6</th>
+                                            <th scope="col">512</th>
+                                            <th scope="col">5.2475</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch7</th>
+                                            <th scope="col">1024</th>
+                                            <th scope="col">5.0975</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch8</th>
+                                            <th scope="col">2048</th>
+                                            <th scope="col">23.4</th>
+                                        </tr>
 
-                            </tr>
-                            </thead>
-                            <tbody id="table-body_graphd_tra">
-                            </tbody>
-                        </table>
-
-
-                        <table class="table-fill" id="result-table12" style=" display: none;">
-
-                            <caption>Training Phase</caption>
-                            <thead class="thead-light">
-                            <tr>
-                                <th scope="col">State</th>
-                                <th scope="col">Workload</th>
-                                <th scope="col">RAM HWM</th>
-                                <th scope="col">RAM RSS</th>
-                                <th scope="col">Time Cost</th>
-                                <th scope="col">Accumulated Time Cost</th>
-
-                            </tr>
-                            </thead>
-                            <tbody id="table-body_pregelplus_tra">
-                            </tbody>
-                        </table>
-
-                    </div>
-
-
-                </div>
-
-                <div class="row">
-                    <div id="evaluation_table">
-
-
-                        <table class="table-fill" id="result-table21" style=" display: table;">
-
-                            <caption>Evaluation Phase</caption>
-                            <thead class="thead-light">
-                            <tr>
-                                <th scope="col">State</th>
-                                <th scope="col">Workload</th>
-                                <th scope="col">I/O util%</th>
-                                <th scope="col">Time Cost</th>
-                                <th scope="col">Accumulated Time Cost</th>
-
-                            </tr>
-                            </thead>
-                            <tbody id="table-body_graphd_eval">
-                            </tbody>
-                        </table>
+                                        </thead>
+                                        <tbody id="table-body_graphd_tra">
+                                        </tbody>
+                                    </table>
 
 
-                        <table class="table-fill" id="result-table22" style=" display: none;">
-
-                            <caption>Evaluation Phase</caption>
-                            <thead class="thead-light">
-                            <tr>
-                                <th scope="col">State</th>
-                                <th scope="col">Workload</th>
-                                <th scope="col">RAM HWM</th>
-                                <th scope="col">RAM RSS</th>
-                                <th scope="col">Time Cost</th>
-                                <th scope="col">Accumulated Time Cost</th>
-
-                            </tr>
-                            </thead>
-                            <tbody id="table-body_pregelplus_eval">
-                            </tbody>
-                        </table>
-
-                    </div>
-                </div>
-
-
-            </div>
-
-            <!-- <div class="col-md-9 col-lg-9 col-xs-9">
-                <div class="row" >
-                <div id="training_table">
-
-                                <table class="table-fill" id="result-table11" style="display: table;">
+                                    <table class="table-fill" id="result-table12" style="display: none;">
 
                                         <caption>Training Phase</caption>
                                     <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col">State</th>
-                                        <th scope="col">Workload</th>
-                                        <th scope="col">I/O util%</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch1</th>
-                                        <th scope="col">16</th>
-                                        <th scope="col">4.85</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch2</th>
-                                        <th scope="col">32</th>
-                                        <th scope="col">5.2975</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch3</th>
-                                        <th scope="col">64</th>
-                                        <th scope="col">7.05</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch4</th>
-                                        <th scope="col">128</th>
-                                        <th scope="col">4.7975</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch5</th>
-                                        <th scope="col">256</th>
-                                        <th scope="col">4.0475</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch6</th>
-                                        <th scope="col">512</th>
-                                        <th scope="col">5.2475</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch7</th>
-                                        <th scope="col">1024</th>
-                                        <th scope="col">5.0975</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch8</th>
-                                        <th scope="col">2048</th>
-                                        <th scope="col">23.4</th>
-                                    </tr>
-
+                                        <tr>
+                                            <th scope="col">State</th>
+                                            <th scope="col">Workload</th>
+                                            <th scope="col">maxHWM</th>
+                                            <th scope="col">maxRSS</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch1</th>
+                                            <th scope="col">32</th>
+                                            <th scope="col">131566</th>
+                                            <th scope="col">125213</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch2</th>
+                                            <th scope="col">64</th>
+                                            <th scope="col">214379</th>
+                                            <th scope="col">196790</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch3</th>
+                                            <th scope="col">128</th>
+                                            <th scope="col">383154</th>
+                                            <th scope="col">320201</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch4</th>
+                                            <th scope="col">256</th>
+                                            <th scope="col">682624</th>
+                                            <th scope="col">464078</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch5</th>
+                                            <th scope="col">512</th>
+                                            <th scope="col">1152704</th>
+                                            <th scope="col">745627</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch6</th>
+                                            <th scope="col">1024</th>
+                                            <th scope="col">2064403</th>
+                                            <th scope="col">1225367</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch7</th>
+                                            <th scope="col">2048</th>
+                                            <th scope="col">3984616</th>
+                                            <th scope="col">2070943</th>
+                                        </tr>
                                     </thead>
-                                    <tbody id="table-body_graphd_tra">
+                                    <tbody id="table-body_pregelplus_tra">
+                                    </tbody>
+                                </table>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+                        <div id="evaluation_table">
+
+
+                                <table class="table-fill" id="result-table21" style="display: table;">
+
+                                        <caption>Evaluation Phase</caption>
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col">State</th>
+                                            <th scope="col">Workload</th>
+                                            <th scope="col">I/O util%</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch7</th>
+                                            <th scope="col">4096</th>
+                                            <th scope="col">100.2</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Batch8</th>
+                                            <th scope="col">16</th>
+                                            <th scope="col">5.2475</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table-body_graphd_eval">
                                     </tbody>
                                 </table>
 
 
-                                <table class="table-fill" id="result-table12" style="display: none;">
+                                <table class="table-fill" id="result-table22" style="display: none;">
 
-                                    <caption>Training Phase</caption>
+                                    <caption>Evaluation Phase</caption>
                                 <thead class="thead-light">
                                     <tr>
                                         <th scope="col">State</th>
@@ -593,130 +642,39 @@
                                         <th scope="col">maxRSS</th>
                                     </tr>
                                     <tr>
-                                        <th scope="col">Batch1</th>
-                                        <th scope="col">32</th>
-                                        <th scope="col">131566</th>
-                                        <th scope="col">125213</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch2</th>
-                                        <th scope="col">64</th>
-                                        <th scope="col">214379</th>
-                                        <th scope="col">196790</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch3</th>
-                                        <th scope="col">128</th>
-                                        <th scope="col">383154</th>
-                                        <th scope="col">320201</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch4</th>
-                                        <th scope="col">256</th>
-                                        <th scope="col">682624</th>
-                                        <th scope="col">464078</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch5</th>
-                                        <th scope="col">512</th>
-                                        <th scope="col">1152704</th>
-                                        <th scope="col">745627</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch6</th>
-                                        <th scope="col">1024</th>
-                                        <th scope="col">2064403</th>
-                                        <th scope="col">1225367</th>
-                                    </tr>
-                                    <tr>
                                         <th scope="col">Batch7</th>
-                                        <th scope="col">2048</th>
-                                        <th scope="col">3984616</th>
-                                        <th scope="col">2070943</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="table-body_pregelplus_tra">
-                                </tbody>
-                            </table>
-
-                    </div>
-
-
-                </div>
-
-                <div class="row">
-                    <div id="evaluation_table">
-
-
-                            <table class="table-fill" id="result-table21" style="display: table;">
-
-                                    <caption>Evaluation Phase</caption>
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col">State</th>
-                                        <th scope="col">Workload</th>
-                                        <th scope="col">I/O util%</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Batch7</th>
-                                        <th scope="col">4096</th>
-                                        <th scope="col">100.2</th>
+                                        <th scope="col">7755</th>
+                                        <th scope="col">14654785</th>
+                                        <th scope="col">7058935</th>
                                     </tr>
                                     <tr>
                                         <th scope="col">Batch8</th>
-                                        <th scope="col">16</th>
-                                        <th scope="col">5.2475</th>
+                                        <th scope="col">2485</th>
+                                        <th scope="col">14654785</th>
+                                        <th scope="col">8124202</th>
                                     </tr>
                                 </thead>
-                                <tbody id="table-body_graphd_eval">
+                                <tbody id="table-body_pregelplus_eval">
                                 </tbody>
                             </table>
 
-
-                            <table class="table-fill" id="result-table22" style="display: none;">
-
-                                <caption>Evaluation Phase</caption>
-                            <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">State</th>
-                                    <th scope="col">Workload</th>
-                                    <th scope="col">maxHWM</th>
-                                    <th scope="col">maxRSS</th>
-                                </tr>
-                                <tr>
-                                    <th scope="col">Batch7</th>
-                                    <th scope="col">7755</th>
-                                    <th scope="col">14654785</th>
-                                    <th scope="col">7058935</th>
-                                </tr>
-                                <tr>
-                                    <th scope="col">Batch8</th>
-                                    <th scope="col">2485</th>
-                                    <th scope="col">14654785</th>
-                                    <th scope="col">8124202</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table-body_pregelplus_eval">
-                            </tbody>
-                        </table>
-
+                        </div>
                     </div>
-                </div>
 
 
-                </div>-->
-
-
+                    </div>-->
 
 
 
 
 
 
-            <hr>
 
+
+                <hr>
+
+            </div>
         </div>
-
 
 <!--Test Zone-->
 

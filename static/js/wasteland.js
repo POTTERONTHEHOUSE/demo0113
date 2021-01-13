@@ -7,6 +7,8 @@
  rocks=0;
  i=0;
  j=0;
+ xworkload = 10240;
+
 //datset
 
 var param_json= {
@@ -219,32 +221,7 @@ var batch_array=[];
 
 var color_table=["#80ff8b","#80fff9","#8091ff","#b980ff","#ff8080","#ffb980","#edfa00","#00fa32","#0021fa","#8900fa","#c7041e"];
 
-//system
-/* if hidetable is called then togglesys will be needed
-function togglesys(){
-  $("#syscontent").collapse("toggle");
-}*/
-/*
-function hidetables() {
-  if(document.getElementById("graphd11").checked == true){
-    //hide footprint
-              $("#result-table12").hide();
-              $("#result-table22").hide();
-              $("#result-table11").show();
-              $("#result-table21").show();
-              document.getElementById("sysresult").innerHTML="GRAPHD";
-            }
-          else if (document.getElementById("graphd12").checked == true) {
-    //hide i/o
-            $("#result-table11").hide();
-            $("#result-table21").hide();
-            $("#result-table12").show();
-            $("#result-table22").show();
-            document.getElementById("sysresult").innerHTML="PREGELPLUS";
-          }
-      
-}
-*/
+
 // for system select&form-control 
 function switchtable(value) {  
   var selectedOption=value.options[value.selectedIndex];  
@@ -281,61 +258,29 @@ function showalg2(){
   }
 }
 
-//cluster size
+//check if the cluster size is legal
 function toggleclusize(){
-  var div1 = document.getElementById("clusizecontent");
-  if (div1.style.display === "none") {
-      div1.style.display = "block";
-  } else {
-      div1.style.display = "none";
-  }
+    xworkload = Number(document.getElementById("workload").value);
+    y = Number(document.getElementById("clusizeresult").value);
+     if (isNaN(xworkload) || xworkload < 1 || (xworkload > 1302 && y==1)) {
+      window.alert("Illegal workload! Please enter again!");
+      xworkload =0;
+     } 
+     else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 2605 && y==2)) {
+      window.alert("Illegal workload! Please enter again!");
+      xworkload =0;
+     }
+      else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 5210 && y==4)) {
+      window.alert("Illegal workload! Please enter again!");
+      xworkload =0;
+     }
+      else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 10240 && y==8)) {
+      window.alert("Illegal workload! Please enter again!");
+      xworkload =0;
+     }
+
 }
 
-function showclusize1(){
-  if(document.getElementById("machine11").checked == true){
-    document.getElementById("clusizeresult").innerHTML="1";
-  }
-}
-function showclusize2(){
-  if (document.getElementById("machine12").checked == true){
-    document.getElementById("clusizeresult").innerHTML="2";
-  }
-}
-function showclusize3(){
-  if(document.getElementById("machine13").checked == true){
-    document.getElementById("clusizeresult").innerHTML="3";
-  }
-}
-function showclusize4(){
-  if (document.getElementById("machine14").checked == true){
-    document.getElementById("clusizeresult").innerHTML="4";
-  }
-}
-function showclusize5(){
-  if(document.getElementById("machine15").checked == true){
-    document.getElementById("clusizeresult").innerHTML="5";
-  }
-}
-function showclusize6(){
-  if (document.getElementById("machine16").checked == true){
-    document.getElementById("clusizeresult").innerHTML="6";
-  }
-}
-function showclusize7(){
-  if(document.getElementById("machine17").checked == true){
-    document.getElementById("clusizeresult").innerHTML="7";
-  }
-}
-function showclusize8(){
-  if (document.getElementById("machine18").checked == true){
-    document.getElementById("clusizeresult").innerHTML="8";
-  }
-}
-function showclusize9(){
-  if (document.getElementById("machine19").checked == true){
-    document.getElementById("clusizeresult").innerHTML=document.getElementById("usermachinenumber").value;
-  }
-}
 
  function function1(x){
      if (phase=="end"){return;}
@@ -425,14 +370,27 @@ function switchmanual() {
 }
 
 function checkworkload(){
-  var x = new Number;
-  x = Number(document.getElementById("workload").value);
-  if (isNaN(x) || x < 1 || x > 40960) {
+  
+  var y = new Number;
+  xworkload = Number(document.getElementById("workload").value);
+  y = Number(document.getElementById("clusizeresult").value);
+   if (isNaN(xworkload) || xworkload < 1 || (xworkload > 1302 && y==1)) {
     window.alert("Illegal workload! Please enter again!");
+    xworkload =0;
    } 
-   else {
-      window.alert("Success");
+   else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 2605 && y==2)) {
+    window.alert("Illegal workload! Please enter again!");
+    xworkload =0;
    }
+    else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 5210 && y==4)) {
+    window.alert("Illegal workload! Please enter again!");
+    xworkload =0;
+   }
+    else if (isNaN(xworkload) || xworkload < 1 || xworkload > 10240) {
+    window.alert("Illegal workload! Please enter again!");
+    xworkload =0;
+   }
+ 
   document.getElementById("wlresult").innerHTML=document.getElementById("workload").value;
 }
 
@@ -664,71 +622,77 @@ function add_batch() {
     draw_batch(batch_array);
 }
 
-function rockit(){
+// function rockit(){
 
-      //Delete the items in the table created by the last rockit
-      if (rocks>0){
-        $( "#table-body_pregelplus_tra tr" ).remove();
-        $( "#table-body_pregelplus_eval tr" ).remove();
-        $( "#table-body_graphd_tra tr" ).remove();
-        $( "#table-body_graphd_eval tr" ).remove();
-        i = 0;
-        j = 0;
-        init_timestamp = timestamp;
-      }
+// //determine if the input of the workload is legal
+//   if (xworkload==0){
+//       window.alert("Illegal workload! Please enter the workload again!");
+//       return;
+//   }
 
-        //show the loading icon for the first time
-        var trx = $('<tr id="pending-row">' + '<td>' + '<img src="/static/images/load2.gif"/>' +  '</td><td>'  + '</td><td>' +  '</td><td>' +  '</td><td>' +  '</td><td>' + '</td></tr>');
-        if(document.getElementById("chsys").value=="graphd"){
-          $("#table-body_graphd_tra").append(trx);
-          //$("#table-body_graphd_tra tr:first").append($('<img src="/static/images/load2.gif"/>'));
+//       //Delete the items in the table created by the last rockit
+//       if (rocks>0){
+//         $( "#table-body_pregelplus_tra tr" ).remove();
+//         $( "#table-body_pregelplus_eval tr" ).remove();
+//         $( "#table-body_graphd_tra tr" ).remove();
+//         $( "#table-body_graphd_eval tr" ).remove();
+//         i = 0;
+//         j = 0;
+//         init_timestamp = timestamp;
+//       }
 
-         }else if(document.getElementById("chsys").value=="pregelplus"){
-          //$("#table-body_pregelplus_tra tr:first").append($('<img src="/static/images/load2.gif"/>'));
-          $("#table-body_pregelplus_tra").append(trx);
+//         //show the loading icon for the first time
+//         var trx = $('<tr id="pending-row">' + '<td>' + '<img src="/static/images/load2.gif"/>' +  '</td><td>'  + '</td><td>' +  '</td><td>' +  '</td><td>' +  '</td><td>' + '</td></tr>');
+//         if(document.getElementById("chsys").value=="graphd"){
+//           $("#table-body_graphd_tra").append(trx);
+//           //$("#table-body_graphd_tra tr:first").append($('<img src="/static/images/load2.gif"/>'));
 
-         }
+//          }else if(document.getElementById("chsys").value=="pregelplus"){
+//           //$("#table-body_pregelplus_tra tr:first").append($('<img src="/static/images/load2.gif"/>'));
+//           $("#table-body_pregelplus_tra").append(trx);
+
+//          }
 
 
-      var x = Math.floor(Math.random() * 1000000000);
-      //post parameters to the server
-     $.ajax({
+//       var x = Math.floor(Math.random() * 1000000000);
+//       //post parameters to the server
+//      $.ajax({
        
-      url:'http://localhost:80/start_task',
-      async:false,//for the return value
-      type:'POST',
-      contentType: "application/json",
-      data:JSON.stringify({
-        "dataset":document.getElementById("chdataset").value,
-        "workload":parseInt(document.getElementById("workload").value),
-        "algorithm":document.getElementById("chalg").value,
-        "num_of_machines":document.getElementById("clusizeresult").value,
-        "system":document.getElementById("chsys").value,
-        "uuid":x,
-      }),
+//       url:'http://localhost:80/start_task',
+//       async:false,//for the return value
+//       type:'POST',
+//       contentType: "application/json",
+//       data:JSON.stringify({
+//         "dataset":document.getElementById("chdataset").value,
+//         "workload":parseInt(document.getElementById("workload").value),
+//         "algorithm":document.getElementById("chalg").value,
+//         "num_of_machines":document.getElementById("clusizeresult").value,
+//         "system":document.getElementById("chsys").value,
+//         "uuid":x,
+//       }),
       
-      success : function(data){
+//       success : function(data){
             
-            if (data.result.status!="Okay"){
-              alert(data.result.status);
-              return;
-            }
+//             if (data.result.status!="Okay"){
+//               alert(data.result.status);
+//               return;
+//             }
             
-            var i=1;
-            timestamp=Date.now()/1000;
-            init_timestamp = timestamp;
-            while(phase!="end"){
-             // setTimeout(function(){function1(x)},1000*i);
-             function1(x)
-             i++;
-            }
-            $("#pending-row").remove();
-          },
+//             var i=1;
+//             timestamp=Date.now()/1000;
+//             init_timestamp = timestamp;
+//             while(phase!="end"){
+//              // setTimeout(function(){function1(x)},1000*i);
+//              function1(x)
+//              i++;
+//             }
+//             $("#pending-row").remove();
+//           },
 
-    })
+//     })
 
 
-}
+// }
 
 
 
@@ -740,7 +704,7 @@ function init_all() {
     var num_of_machines=document.getElementById("clusizeresult").value;
     var system=document.getElementById("chsys").value;
     var batch_num=document.getElementById("userbatchnumber").value;
-    var memory=document.getElementById("memory").value;
+    //var memory=document.getElementById("memory").value;
 
     generate_batch_inputs(batch_num);
 
@@ -749,6 +713,11 @@ function init_all() {
 }
 
     function rockit(){
+        //determine if the input of the workload is legal
+        if (xworkload==0){
+            window.alert("Illegal workload! Please enter the workload again!");
+            return;
+}
         //Delete the items in the table created by the last rockit
         if (rocks>0){
             $( "#table-body_pregelplus_tra tr" ).remove();
@@ -759,7 +728,7 @@ function init_all() {
             j = 0;
             init_timestamp = timestamp;
         }
-
+      
         //show the loading icon for the first time
         var trx = $('<tr id="pending-row">' + '<td>' + '<img src="/static/images/load2.gif"/>' +  '</td><td>'  + '</td><td>' +  '</td><td>' +  '</td><td>' +  '</td><td>' + '</td></tr>');
         if(document.getElementById("chsys").value=="graphd"){
@@ -828,10 +797,11 @@ function init_all() {
         $('#chsys')[0].selectedIndex = 0;
         $('#chsys').trigger('onchange');
 
-        $('#chalg')[0].selectedIndex = 0;
+        $('#chalg')[0].selectedIndex = 1;
 
+        $('#workload')[0].value= 10240;
 
-        $('#clusizeresult')[0].selectedIndex = 2;
+        $('#clusizeresult')[0].selectedIndex = 3;
         $('#clusizeresult').trigger('onchange');
 
 
