@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="962c27d0-9566-4dee-b5a2-80f892b0594c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/static/js/wasteland.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/wasteland.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="170" column="57" selection-start-line="170" selection-start-column="57" selection-end-line="170" selection-end-column="57" />
+            <state relative-caret-position="402">
+              <caret line="427" column="124" selection-start-line="427" selection-start-column="124" selection-end-line="427" selection-end-column="124" />
               <folding>
                 <element signature="e#42248#44518#0" expanded="true" />
               </folding>
@@ -107,6 +106,7 @@
       <find>click</find>
       <find>memor</find>
       <find>memory</find>
+      <find>batch</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -207,12 +207,12 @@
       <workItem from="1610271459462" duration="16555000" />
       <workItem from="1610454368320" duration="1460000" />
       <workItem from="1610458722545" duration="2163000" />
-      <workItem from="1610510207056" duration="1496000" />
+      <workItem from="1610510207056" duration="1599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37548000" />
+    <option name="totallyTimeSpent" value="37651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -323,8 +323,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="170" column="57" selection-start-line="170" selection-start-column="57" selection-end-line="170" selection-end-column="57" />
+        <state relative-caret-position="402">
+          <caret line="427" column="124" selection-start-line="427" selection-start-column="124" selection-end-line="427" selection-end-column="124" />
           <folding>
             <element signature="e#42248#44518#0" expanded="true" />
           </folding>
