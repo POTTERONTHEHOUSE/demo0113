@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="962c27d0-9566-4dee-b5a2-80f892b0594c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/static/js/wasteland.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/wasteland.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/wastebusket.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/wastebusket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -51,7 +51,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/lsm_button.css">
+        <entry file="file://$PROJECT_DIR$/static/css/wastebusket.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="499">
               <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
@@ -89,7 +89,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/wasteland.js">
+        <entry file="file://$PROJECT_DIR$/static/js/wastebusket.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
               <caret line="572" column="46" selection-start-line="572" selection-start-column="46" selection-end-line="572" selection-end-column="46" />
@@ -135,8 +135,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/server.py" />
-        <option value="$PROJECT_DIR$/static/css/lsm_button.css" />
-        <option value="$PROJECT_DIR$/static/js/wasteland.js" />
+        <option value="$PROJECT_DIR$/static/css/wastebusket.css" />
+        <option value="$PROJECT_DIR$/static/js/wastebusket.js" />
         <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
@@ -288,7 +288,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/ATOM-yufei/DEMO-ATOM/ATOM-DEMO/static/js/wasteland.js" />
+    <entry file="file://$USER_HOME$/ATOM-yufei/DEMO-ATOM/ATOM-DEMO/static/js/wastebusket.js" />
     <entry file="file://$USER_HOME$/ATOM-yufei/DEMO-ATOM/ATOM-DEMO/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/static/js/params.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -307,7 +307,7 @@
     <entry file="file://$PROJECT_DIR$/static/js/plotly.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/lsm_button.css">
+    <entry file="file://$PROJECT_DIR$/static/css/wastebusket.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
           <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
@@ -326,7 +326,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/wasteland.js">
+    <entry file="file://$PROJECT_DIR$/static/js/wastebusket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="572" column="46" selection-start-line="572" selection-start-column="46" selection-end-line="572" selection-end-column="46" />
