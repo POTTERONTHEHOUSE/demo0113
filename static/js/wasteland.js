@@ -399,7 +399,7 @@ function checkworkload(){
 // batchnumber input value alert
 function checkbatchnumber() {
   var x = new Number;
-  x = Number(document.getElementById("memory").value);
+  x = Number(document.getElementById("userbatchnumber").value);
   if (isNaN(x) || x < 1 || x > document.getElementById("workload").value) {window.alert("Illegal workload! Please enter again!");} else {
       //window.alert("Success");
       generate_batch_inputs(x);
@@ -427,7 +427,7 @@ function load_batch(workload, batch_num) {
 }
 
 //ROCK IT
-function draw_batch(batch_array) {
+function draw_batch() {
     document.getElementById('batch_table').innerHTML = "";
     for(var i=0; i<batch_array.length; i++){
         var max_workload=2000;
@@ -528,7 +528,7 @@ function plot_batch(batch_array){
             pad: 0
         },
         yaxis: {
-            title: 'Memory Usage (GB)'
+            title: 'Estimated Memory Usage (MB)'
         },
         xaxis: {
             title: 'Workload Metric',
@@ -707,7 +707,10 @@ function init_all() {
     //var memory=document.getElementById("memory").value;
 
     generate_batch_inputs(batch_num);
-
+    $("#chdataset,#workload,#chalg,#clusizeresult,#chsys").on('change', function() {
+        batch_array=[];
+        draw_batch(batch_array);
+    });
 
 
 }

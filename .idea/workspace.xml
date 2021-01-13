@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="962c27d0-9566-4dee-b5a2-80f892b0594c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/lsm_button.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/lsm_button.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/wasteland.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/wasteland.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
@@ -25,22 +23,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="729" column="122" selection-start-line="729" selection-start-column="122" selection-end-line="729" selection-end-column="122" />
+            <state relative-caret-position="405">
+              <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
               <folding>
-                <element signature="e#3261#3321#0" expanded="true" />
-                <element signature="e#11731#11794#0" expanded="true" />
-                <element signature="e#11804#25877#0" />
-                <element signature="e#26088#39449#0" />
-                <element signature="e#26141#26187#0" expanded="true" />
-                <element signature="e#26758#26781#0" expanded="true" />
-                <element signature="e#39488#39509#0" expanded="true" />
-                <element signature="e#39620#39692#0" expanded="true" />
-                <element signature="e#39719#39740#0" expanded="true" />
-                <element signature="e#39795#39816#0" expanded="true" />
-                <element signature="e#41379#41456#0" expanded="true" />
-                <element signature="e#41944#41990#0" expanded="true" />
+                <element signature="e#9334#9397#0" expanded="true" />
+                <element signature="e#9236#9272#0" expanded="true" />
+                <element signature="e#9274#9340#0" expanded="true" />
+                <element signature="e#9372#9394#0" expanded="true" />
+                <element signature="e#9415#9459#0" expanded="true" />
+                <element signature="e#20070#23447#0" />
+                <element signature="e#23369#23477#0" expanded="true" />
+                <element signature="e#23728#23749#0" expanded="true" />
+                <element signature="e#23804#23825#0" expanded="true" />
+                <element signature="e#42248#44518#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/block.rnc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -86,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/wasteland.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="505" column="95" selection-start-line="505" selection-start-column="95" selection-end-line="505" selection-end-column="95" />
+            <state relative-caret-position="297">
+              <caret line="572" column="46" selection-start-line="572" selection-start-column="46" selection-end-line="572" selection-end-column="46" />
               <folding>
                 <element signature="e#175#7928#0" />
                 <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -118,10 +123,13 @@
       <find>jqu</find>
       <find>success</find>
       <find>click</find>
+      <find>memor</find>
+      <find>memory</find>
+      <find>batch</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -143,9 +151,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="height" value="973" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -153,45 +162,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ATOM-DEMO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ATOM-DEMO" type="462c0819:PsiDirectoryNode" />
+              <item name="demo0113" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo0113" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ATOM-DEMO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ATOM-DEMO" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ATOM-DEMO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ATOM-DEMO" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ATOM-DEMO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ATOM-DEMO" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ATOM-DEMO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ATOM-DEMO" type="462c0819:PsiDirectoryNode" />
+              <item name="demo0113" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo0113" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -233,17 +226,18 @@
       <workItem from="1610271459462" duration="16555000" />
       <workItem from="1610454368320" duration="1460000" />
       <workItem from="1610458722545" duration="2163000" />
+      <workItem from="1610510207056" duration="3890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36052000" />
+    <option name="totallyTimeSpent" value="39942000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -294,33 +288,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../ATOM-yufei/DEMO-ATOM/ATOM-DEMO/static/js/wasteland.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="254" lean-forward="true" selection-start-line="254" selection-end-line="317" selection-end-column="1" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../ATOM-yufei/DEMO-ATOM/ATOM-DEMO/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="33" selection-end-column="48" />
-          <folding>
-            <element signature="e#12075#12497#0" />
-            <element signature="e#12651#14447#0" />
-            <element signature="e#14506#16272#0" />
-            <element signature="e#16314#17996#0" />
-            <element signature="e#26753#43065#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/ATOM-yufei/DEMO-ATOM/ATOM-DEMO/static/js/wasteland.js" />
+    <entry file="file://$USER_HOME$/ATOM-yufei/DEMO-ATOM/ATOM-DEMO/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/static/js/params.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
@@ -335,10 +304,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/loader.js">
+    <entry file="file://$PROJECT_DIR$/static/js/plotly.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/plotly.js">
+    <entry file="file://$PROJECT_DIR$/static/css/lsm_button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/loader.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/main changed.js">
@@ -350,17 +326,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/lsm_button.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="87" column="12" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/wasteland.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="505" column="95" selection-start-line="505" selection-start-column="95" selection-end-line="505" selection-end-column="95" />
+        <state relative-caret-position="297">
+          <caret line="572" column="46" selection-start-line="572" selection-start-column="46" selection-end-line="572" selection-end-column="46" />
           <folding>
             <element signature="e#175#7928#0" />
             <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -371,23 +340,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="729" column="122" selection-start-line="729" selection-start-column="122" selection-end-line="729" selection-end-column="122" />
+        <state relative-caret-position="405">
+          <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
           <folding>
-            <element signature="e#3261#3321#0" expanded="true" />
-            <element signature="e#11731#11794#0" expanded="true" />
-            <element signature="e#11804#25877#0" />
-            <element signature="e#26088#39449#0" />
-            <element signature="e#26141#26187#0" expanded="true" />
-            <element signature="e#26758#26781#0" expanded="true" />
-            <element signature="e#39488#39509#0" expanded="true" />
-            <element signature="e#39620#39692#0" expanded="true" />
-            <element signature="e#39719#39740#0" expanded="true" />
-            <element signature="e#39795#39816#0" expanded="true" />
-            <element signature="e#41379#41456#0" expanded="true" />
-            <element signature="e#41944#41990#0" expanded="true" />
+            <element signature="e#9334#9397#0" expanded="true" />
+            <element signature="e#9236#9272#0" expanded="true" />
+            <element signature="e#9274#9340#0" expanded="true" />
+            <element signature="e#9372#9394#0" expanded="true" />
+            <element signature="e#9415#9459#0" expanded="true" />
+            <element signature="e#20070#23447#0" />
+            <element signature="e#23369#23477#0" expanded="true" />
+            <element signature="e#23728#23749#0" expanded="true" />
+            <element signature="e#23804#23825#0" expanded="true" />
+            <element signature="e#42248#44518#0" expanded="true" />
           </folding>
         </state>
       </provider>

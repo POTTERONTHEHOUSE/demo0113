@@ -91,14 +91,14 @@
                     <!--                     <li class="page-scroll">
                       <a href="#people">People</a>
                   </li> -->
-                  <li class="page-scroll active">
+                  <li class="page-scroll">
                     <a href="/index_2">Auto-Tune</a>
                 </li>
 
                 <!--                     <li class="page-scroll">
                   <a href="#about">About</a>
               </li> -->
-                <li class="page-scroll">
+                <li class="page-scroll active">
                      <a href="/index">Interactive Exploration</a>
                 </li>
                 </ul>
@@ -142,13 +142,12 @@
                 <div class="col-sm-3 text-center">
 
                     <i class="fa fa-cogs fa-5x" aria-hidden="true"></i>
-                    <p class="text-center">Self-design</p>
+                    <p class="text-center">Automatic Suggestions</p>
                 </div>
                 <div class="col-sm-9">
 
                     <!-- <p>CrimsonDB is a new <em>plug and play</em> key-value store. It offers optimal reads and writes given a memory budget and an application workload. CrimsonDB decides autonomously how to change its core design to adjust to workload, hardware and other parameters.</p> -->
-                    <p>CrimsonDB decides autonomously how to change its core design to adjust to workload, hardware and other parameters. It can assume arbitrary shapes in between the core design classes of log, LSM-tree, B-tree, and their hybrids. It offers
-                        optimal reads and writes given a memory budget and an application workload. </p>
+                    <p>Exhausted when picking a suitable task fragmentation with VC- Systems? VC-Tune is here to help you. VC-Tune enables easy exploration of different task fragmentations schemes in a simple, online, and interactive manner. VC-Tune can also give you a direct suggestion of a suitable task fragmentation scheme. </p>
                 </div>
             </div>
 
@@ -156,13 +155,12 @@
                 <div class="col-sm-3 text-center">
 
                     <i class="fa fa-tachometer fa-5x" aria-hidden="true"></i>
-                    <p class="text-center">Performance</p>
+                    <p class="text-center">Plenty of Interaction</p>
                 </div>
                 <div class="col-sm-9">
 
                     <!-- <p>We build CrimsonDB by <em>mapping</em> the whole possible design space of key-value stores which allows us to discover key design optimizations. Through them we push read and write performance towards the optimal behavior while at the same time discover the rules that govern automation.</p> -->
-                    <p>We build CrimsonDB by mapping the whole possible design space of key-value stores. This allows us to discover new designs and optimizations. Through them we push read and write performance towards the optimal behavior, while at the
-                        same time discover the rules that govern automation.</p>
+                    <p>A user can fully interact with VC-Tune to get an intuition of the best task fragmentation schemes, depending on various user specified settings.</p>
                 </div>
             </div>
 
@@ -170,13 +168,12 @@
                 <div class="col-sm-3 text-center">
 
                     <i class="fa fa-question fa-5x" aria-hidden="true"></i>
-                    <p class="text-center">What if?</p>
+                    <p class="text-center">Easy Extension</p>
                 </div>
                 <div class="col-sm-9">
                     <!-- <p>
                   CrimsonDB offers advanced system design exploration properties such as <em>allowing to argue about hardware properties and the potential benefit when adding new hardware</em> or <em>what kind of hardware would bring a required performance property for a given workload</em>.</p> -->
-                    <p>CrimsonDB offers advanced system design exploration features such as allowing to reason about hardware properties and the potential benefit when adding new hardware or what kind of low level system design choices would bring a required
-                        performance property for a given workload.</p>
+                    <p>VC-Tune is a prototype system, but it can be very simple to extend to other VC-systems, datasets or real-world tasks, due to its general design.</p>
                 </div>
             </div>
 
@@ -195,10 +192,10 @@
         <div class="container page-scroll" style="width:2400px; transform: scale(0.8) translateX(-450px);">
         <div class="row" id="environment_setting">
             <div class="col-md-1 col-lg-1 col-xs-1"></div>
-            <div class="col-md-2 col-lg-2 col-xs-2 ">
-                <div class="content">
-                    <h3>Environment Setting:</h3>
-                    <p> Set the parameters for dataset, system, algorithm, the cluster size, workload, and the number of batches. After choosing, hit the button below to see it run!</p>
+            <div class="col-md-2 col-lg-2 col-xs-2 " style="padding-left: 0px;">
+                <div style="font-size: 25px; font-family: Helvetica; font-weight: bold">
+                    <h3 style="font-size:28px">Environment Setting:</h3>
+                    <p style="font-weight: normal; font-size:27px"> Set the parameters for dataset, system, algorithm, the cluster size, workload, and the number of batches. After choosing, hit the button below to see it run!</p>
 
                 </div>
             </div>
@@ -246,7 +243,7 @@
                             <div class="form-group">
 
                                 <select class="form-control rowwidth"  onchange="switchtable(this)" id="chsys">
-                                    <option type="radio" name="graphd1" id="graphd11" value="graphd" checked="">GRAPHD</option>
+                                    <option type="radio" name="graphd1" id="graphd11" value="graphd" checked="">GIRAPH</option>
                                     <option type="radio" name="graphd1" id="graphd12" value="pregelplus" checked=""> PREGELPLUS</option>
                                 </select>
                             </div>
@@ -413,7 +410,7 @@
 
 
         <div class="row" id="part_2">
-            <div class="col-md-1 col-lg-1 col-xs-1"  style="width: 840px; text-align: left; margin-left: calc(50% - 860px)">
+            <div class="col-md-1 col-lg-1 col-xs-1"  style="width: 840px; text-align: left; margin-left: calc(50% - 880px); margin-top:40px; margin-right: 40px;">
                 <div class="col-md-9 col-lg-9 col-xs-9" style="width: 840px;">
                     <div class="trigger out_tab row" style="width: 500px;">
                         <div class="tab  tooltip2" id="dataset-trigger">
@@ -428,7 +425,7 @@
                                 <div class="row2" id="wlcontent" style="display:inline-block;">
                                     <label class="radio-inline">
                                         <ul class="list-inline">
-                                            <input type="number" id="userbatchnumber" class="form-control rowwidth" value="4" onchange="checkbatchnumber()">
+                                            <input type="number" id="userbatchnumber" class="form-control rowwidth" value="1" onchange="checkbatchnumber()">
                                         </ul>
                                     </label>
                                 </div>
