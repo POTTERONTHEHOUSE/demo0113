@@ -1,8 +1,8 @@
  phase="not started";
  workload=0;
  metric=0;
- x = Math.floor(Math.random() * 1000000000);  
- timestamp=0; 
+ x = Math.floor(Math.random() * 1000000000);
+ timestamp=0;
  init_timestamp=0;
  rocks=0;
  i=0;
@@ -222,23 +222,23 @@ var batch_array=[];
 var color_table=["#80ff8b","#80fff9","#8091ff","#b980ff","#ff8080","#ffb980","#edfa00","#00fa32","#0021fa","#8900fa","#c7041e"];
 
 
-// for system select&form-control 
-function switchtable(value) {  
-  var selectedOption=value.options[value.selectedIndex];  
+// for system select&form-control
+function switchtable(value) {
+  var selectedOption=value.options[value.selectedIndex];
 	console.log(selectedOption.value);
 	if(selectedOption.value=="graphd"){
     $("#result-table12").hide();
     $("#result-table22").hide();
     $("#result-table11").show();
     $("#result-table21").show();
-    
+
  	}else if(selectedOption.value=="pregelplus"){
     $("#result-table11").hide();
     $("#result-table21").hide();
     $("#result-table12").show();
     $("#result-table22").show();
-    
-   }   
+
+   }
 }
 
 
@@ -265,7 +265,7 @@ function toggleclusize(){
      if (isNaN(xworkload) || xworkload < 1 || (xworkload > 1024 && y==1)) {
       window.alert("Illegal workload! Please enter again!");
       xworkload =0;
-     } 
+     }
      else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 2048 && y==2)) {
       window.alert("Illegal workload! Please enter again!");
       xworkload =0;
@@ -298,6 +298,10 @@ function toggleclusize(){
              phase=count[0].phase;
              workload=count[0].workload;
              metric=count[0].metric;
+             maxHWM = count[0].maxHWM.toFixed();
+             maxRSS= count[0].maxRSS.toFixed();
+             console.log(maxHWM);
+             console.log(maxRSS);
              var newtimestamp=Date.now()/1000;
 
              if (document.getElementById("chsys").value=="pregelplus"&&phase=="training"){
@@ -305,13 +309,13 @@ function toggleclusize(){
                  j++;
                  var table_body = $("#table-body_pregelplus_tra");
                  $("#pending-row").remove();
-                 var tr = $('<tr>' + '<td>' + '<img src="/static/images/check4.png" style="width:20px;margin-right:10px; float:left;"/>' + ' Batch ' + j + '</td><td>'  + workload + '</td><td>' + metric + '</td><td>'  + metric + '</td><td>' + (newtimestamp-timestamp)  + '</td><td>'+ (newtimestamp-init_timestamp) + '</td></tr>');
+                 var tr = $('<tr>' + '<td>' + '<img src="/static/images/check4.png" style="width:20px;margin-right:10px; float:left;"/>' + ' Batch ' + j + '</td><td>'  + workload + '</td><td>' + maxHWM + '</td><td>'  + maxRSS + '</td><td>' + (newtimestamp-timestamp)  + '</td><td>'+ (newtimestamp-init_timestamp) + '</td></tr>');
              }
              if (document.getElementById("chsys").value=="pregelplus"&&phase!="training"){
                  i++;
                  table_body= $("#table-body_pregelplus_eval");
                  $("#pending-row").remove();
-                 var tr = $('<tr>' + '<td>' + '<img src="/static/images/check4.png" style="width:20px;margin-right:10px; float:left;"/>' + ' Batch ' + i + '</td><td>'  + workload + '</td><td>' + metric + '</td><td>'  + metric + '</td><td>' + (newtimestamp-timestamp) + '</td><td>'+ (newtimestamp-init_timestamp) + '</td></tr>');
+                 var tr = $('<tr>' + '<td>' + '<img src="/static/images/check4.png" style="width:20px;margin-right:10px; float:left;"/>' + ' Batch ' + i + '</td><td>'  + workload + '</td><td>' + maxHWM + '</td><td>'  + maxRSS + '</td><td>' + (newtimestamp-timestamp) + '</td><td>'+ (newtimestamp-init_timestamp) + '</td></tr>');
              }
              else if (document.getElementById("chsys").value=="graphd"&&phase=="training"){
                  //count the number of the training batch
@@ -342,9 +346,9 @@ function togglewl(){
   $("#wlcontent").collapse("toggle");
 }
 
-//when the "disable atom" is chosen, the block switches to "manual input"; 
-// for workload select&form-control 
-function switchatom() {  
+//when the "disable atom" is chosen, the block switches to "manual input";
+// for workload select&form-control
+function switchatom() {
   var div1 = document.getElementById("toatom");
   var div2 = document.getElementById("tomanual");
   var div3 = document.getElementById("enatom");
@@ -354,10 +358,10 @@ function switchatom() {
   } else {
       div1.style.display = "none";
       div2.style.display = "block";
-  } 
+  }
 }
 //then by clicking the spinning icon (with a tooltip) users can switch back to the original.
-function switchmanual() {  
+function switchmanual() {
   var div1 = document.getElementById("toatom");
   var div2 = document.getElementById("tomanual");
   if (div2.style.display === "none") {
@@ -366,18 +370,18 @@ function switchmanual() {
   } else {
       div2.style.display = "none";
       div1.style.display = "block";
-  } 
+  }
 }
 
 function checkworkload(){
-  
+
   var y = new Number;
   xworkload = Number(document.getElementById("workload").value);
   y = Number(document.getElementById("clusizeresult").value);
    if (isNaN(xworkload) || xworkload < 1 || (xworkload > 1302 && y==1)) {
     window.alert("Illegal workload! Please enter again!");
     xworkload =0;
-   } 
+   }
    else if (isNaN(xworkload) || xworkload < 1 || (xworkload > 2605 && y==2)) {
     window.alert("Illegal workload! Please enter again!");
     xworkload =0;
@@ -390,8 +394,9 @@ function checkworkload(){
     window.alert("Illegal workload! Please enter again!");
     xworkload =0;
    }
- 
-  document.getElementById("wlresult").innerHTML=document.getElementById("workload").value;
+   checkbatchnumber();
+
+  //document.getElementById("wlresult").innerHTML=document.getElementById("workload").value;
 }
 
 
@@ -399,13 +404,16 @@ function checkworkload(){
 // batchnumber input value alert
 function checkbatchnumber() {
   var x = new Number;
-  x = Number(document.getElementById("userbatchnumber").value);
-  if (isNaN(x) || x < 1 || x > document.getElementById("workload").value) {
-      window.alert("Illegal workload! Please enter again!");
-    } else {
-      //window.alert("Success");
-      generate_batch_inputs(x);
+  if(document.getElementById("userbatchnumber") != null){
+    x = Number(document.getElementById("userbatchnumber").value);
+    if (isNaN(x) || x < 1 || x > document.getElementById("workload").value) {
+        window.alert("Illegal workload! Please enter again!");
+      } else {
+        //window.alert("Success");
+        generate_batch_inputs(x);
+    }
   }
+
 }
 
 // delete the last row for the tables in the rockit function
@@ -417,7 +425,7 @@ function deleterow(x) {
   table.deleteRow(rowCount -1);
   console.log("tabledeleterow",table);
   console.log(rowCount);
-  
+
 }
 
 //server interface
@@ -430,31 +438,38 @@ function load_batch(workload, batch_num) {
 
 //ROCK IT
 function draw_batch() {
-    document.getElementById('batch_table').innerHTML = "";
-    for(var i=0; i<batch_array.length; i++){
-        var max_workload=2000;
-        var batch_line=batch_array[i];
-        console.log(batch_line);
-        var batch_row=document.createElement("div");
-        batch_row.setAttribute("class","myth_line");
-        batch_row.setAttribute("title",i);
-        for(var j=0; j<batch_line.length; j++){
-            var batch_block=document.createElement("div");
-            batch_block.setAttribute("class","myth");
-            batch_block.setAttribute("style","width:"+790*batch_line[j]/max_workload+"px; background-color:"+color_table[i%color_table.length]);
-            batch_block.innerText=batch_line[j];
-            batch_row.append(batch_block);
-        }
-        document.getElementById('batch_table').append(batch_row);
-    }
-    plot_batch(batch_array);
-    $(".myth_line").on('click', function() {
-        var index=$(this).prop("title");
-        console.log(index);
-        batch_array.splice(index,1);
-        $(this).animate({height: '0px', opacity: '0'}, "fast");
-        setTimeout('draw_batch(batch_array)',200);
-    });
+  if(document.getElementById('batch_table') != null){
+      document.getElementById('batch_table').innerHTML = "";
+      for(var i=0; i<batch_array.length; i++){
+          var max_workload=parseInt(document.getElementById('workload').value);
+          var batch_line=batch_array[i];
+          console.log(batch_line);
+          var batch_row=document.createElement("div");
+          batch_row.setAttribute("class","myth_line");
+          batch_row.setAttribute("title",i);
+          for(var j=0; j<batch_line.length; j++){
+              var batch_block=document.createElement("div");
+              batch_block.setAttribute("class","myth");
+              if(j == 0){
+                margin_left = 30;
+              }else{
+                margin_left = 0;
+              }
+              batch_block.setAttribute("style","width:"+90*batch_line[j]/max_workload+"%;margin-left:" + margin_left +"px; background-color:"+color_table[i%color_table.length]);
+              batch_block.innerText=batch_line[j];
+              batch_row.append(batch_block);
+          }
+          document.getElementById('batch_table').append(batch_row);
+      }
+      plot_batch(batch_array);
+      $(".myth_line").on('click', function() {
+          var index=$(this).prop("title");
+          console.log(index);
+          batch_array.splice(index,1);
+          $(this).animate({height: '0px', opacity: '0'}, "fast");
+          setTimeout('draw_batch(batch_array)',200);
+      });
+  }
 }
 
 function switch_display(part) {
@@ -469,21 +484,24 @@ function switch_display(part) {
 }
 
 function generate_batch_inputs(batch_num){
-    var workload=document.getElementById("workload").value;
-    document.getElementById('batch_inputs').innerHTML = "";
-    for(var i=0; i<batch_num; i++){
-        var batch_input=document.createElement("input");
-        batch_input.setAttribute("id","batch_input_"+i);
-        batch_input.setAttribute("class", "form-control");
-        batch_input.setAttribute("style","display:inline-block; border-color:#555555; margin-left:10px ; margin-bottom:10px; width:"+100+"px");
-        if(i!=(batch_num-1)){
-            batch_input.setAttribute("value",parseInt((workload/batch_num).toFixed(0)));
-        }else{
-            batch_input.setAttribute("value",workload-(batch_num-1)*parseInt((workload/batch_num).toFixed(0)));
-        }
+    var workload=parseInt(document.getElementById("workload").value);
+    if(document.getElementById('batch_inputs') != null){
+      document.getElementById('batch_inputs').innerHTML = "";
+      for(var i=0; i<batch_num; i++){
+          var batch_input=document.createElement("input");
+          batch_input.setAttribute("id","batch_input_"+i);
+          batch_input.setAttribute("class", "form-control");
+          batch_input.setAttribute("style","display:inline-block; border-color:#555555; margin-left:10px ; margin-bottom:10px; width:"+100+"px");
+          if(i!=(batch_num-1)){
+              batch_input.setAttribute("value",parseInt((workload/batch_num).toFixed(0)));
+          }else{
+              batch_input.setAttribute("value",workload-(batch_num-1)*parseInt((workload/batch_num).toFixed(0)));
+          }
 
-        document.getElementById('batch_inputs').append(batch_input);
+          document.getElementById('batch_inputs').append(batch_input);
+      }
     }
+
 }
 
 function plot_batch(batch_array){
@@ -496,12 +514,12 @@ function plot_batch(batch_array){
     var memory=parseInt(document.getElementById("memory").value);
     var init_mem;
     if(dataset=="web"){
-        init_mem=17793069/1024;
+        init_mem=17793069/1024/1024;
     }else if(dataset=="dblp"){
-        init_mem=31678840/1024;
+        init_mem=31678840/1024/1024;
     }
     var param_local;
-    if(system=="graphd"){
+    if(system=="girpah"){
         param_local=param_json.giraph;
     }else if(system=="pregelplus"){
         param_local=param_json.pregelplus;
@@ -533,7 +551,7 @@ function plot_batch(batch_array){
             title: 'Estimated Memory Usage (MB)'
         },
         xaxis: {
-            title: 'Workload Metric',
+            title: 'Workload',
         },
         hovermode: false,
         annotations: [
@@ -566,15 +584,16 @@ function plot_batch(batch_array){
         var sum=0;
         var y_sum=init_mem;
         var y_pre=init_mem;
+        var acc_workloads = 0;
         for(var j=0; j<batch_line.length; j++){
             var batch_size=batch_line[j];
-
+            acc_workloads += batch_size;
             x_array.push(sum);
             x_array.push(sum+batch_size/2);
             y_array.push(Math.min(y_sum,y_pre)/1024);
             y_pre=y_sum+param_local.HWM[0]*Math.pow(batch_size,param_local.HWM[1])+param_local.HWM[2];
             y_array.push(y_pre/1024);
-            y_sum=y_sum+param_local.RSS[0]*Math.pow(batch_size,param_local.RSS[1])+param_local.RSS[2];
+            y_sum=param_local.RSS[0]*Math.pow(acc_workloads,param_local.RSS[1])+param_local.RSS[2];
             sum=sum+batch_line[j];
             console.log(x_array);
             console.log(y_array);
@@ -662,7 +681,7 @@ function init_all() {
             j = 0;
             init_timestamp = timestamp;
         }
-      
+
         //show the loading icon for the first time
         var trx = $('<tr id="pending-row">' + '<td>' + '<img src="/static/images/load2.gif"/>' +  '</td><td>'  + '</td><td>' +  '</td><td>' +  '</td><td>' +  '</td><td>' + '</td></tr>');
         if(document.getElementById("chsys").value=="graphd"){
@@ -737,6 +756,8 @@ function init_all() {
 
         $('#clusizeresult')[0].selectedIndex = 3;
         $('#clusizeresult').trigger('onchange');
+
+        draw_batch(batch_array);
 
 
     });

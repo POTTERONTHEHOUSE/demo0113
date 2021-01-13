@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-   
+
 
     <title>VC-Tune @ CUHKSZ</title>
 
@@ -113,7 +113,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
-                    <img class="img-responsive img-centered" src="{{url_for('static',filename="/images/CRDB.png")}}" alt="ATOM">
+                    <img class="img-responsive img-centered" src="{{url_for('static',filename="images/CRDB.png")}}" alt="ATOM">
                 </div>
             </div>
             <div class="row">
@@ -190,26 +190,26 @@
     <section id="interactiveDemo">
 
         <div class="container page-scroll" style="width:95%;text-align: center">
-            
+
                 <div class="row" id="environment_setting">
-               
+
                         <div class="content">
                             <h3>Environment Setting:</h3>
-                        
+
                         </div>
-                 
-                    
-                   
+
+
+
                         <div class="row">
 
                             <div class="trigger out_tab" >
-                                
+
                                 <div class="tab  tooltip2" id="dataset-trigger">
                                     <div class="row">
                                         <div class="row row1" style="display:inline-block;">
-                                        <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/Align.png")}}">
+                                        <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="images/Align.png")}}">
                                             </span>
-                                        <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Dataset:</span> 
+                                        <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Dataset:</span>
                                         </div>
                                         <div class="row2" id="datasetcontent" style="display:inline-block;">
                                             <form role="form">
@@ -217,22 +217,22 @@
                                                     <select class="form-control" id="chdataset">
                                                         <option type="radio" name="dataset" id="dataset1" value="web" checked="">WEB</option>
                                                         <option type="radio" name="dataset" id="dataset2" value="dblp" checked="">DBLP</option>
-                                                    </select>	
+                                                    </select>
                                                 </div>
                                             </form>
                                         </div>
-                                    </div> 
+                                    </div>
                                     <span class="tooltiptext_mode">Choose one from the two datasets.</span>
                                 </div>
                             </div>
-                            
+
 
                             <div class="trigger out_tab" >
                                 <div class=" tab tooltip2" id="dataset-trigger">
                                 <div class="row">
                                 <div id="sys-trigger" style="display:inline-block;">
                                     <div class="row row1">
-                                    <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/flow.png")}}"></span>
+                                    <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/flow.png")}}"></span>
                                     <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="systext"> Systems:</span>
                                     </div>
                                 </div>
@@ -240,13 +240,13 @@
                                 <div class="row2" id="syscontent" style="display:inline-block;">
                                 <form role="form">
                                     <div class="form-group">
-                                        
+
                                         <select class="form-control rowwidth"  onchange="switchtable(this)" id="chsys">
                                             <option selected="selected" type="radio" name="graphd1" id="graphd12" value="pregelplus" checked=""> PREGELPLUS</option>
                                             <option type="radio" name="graphd1" id="graphd11" value="graphd" checked="">GRAPHD</option>
 
                                             <option type="radio" name="graphd1" id="graphd12" value="pregelplus" checked="">GIRAPH</option>
-                                        </select>	
+                                        </select>
                                     </div>
                                 </form>
                                 </div>
@@ -254,14 +254,14 @@
                                 <span class="tooltiptext_mode">Choose one from the two systems.</span>
                             </div>
                             </div>
-            
+
                             <div class="trigger out_tab">
                                 <div class="tab  tooltip2" id="dataset-trigger">
                                 <div class="row">
                                     <div class="row row1" style="display:inline-block;">
-                                    <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/filter.png")}}">
+                                    <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="images/filter.png")}}">
                                         </span>
-                                    <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Algorithm:</span> 
+                                    <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Algorithm:</span>
                                     </div>
                                     <div class="row2" id="algcontent" style="display:inline-block;">
                                         <form role="form">
@@ -269,11 +269,11 @@
                                                 <select class="form-control rowwidth" id="chalg">
                                                     <option type="radio" name="algo1" id="algo11" value="mssp" checked=""> MSSP</option>
                                                     <option type="radio" name="algo1" id="algo12" value="ppr" checked=""> PPR</option>
-                                                </select>	
+                                                </select>
                                             </div>
                                         </form>
                                     </div>
-                                </div> 
+                                </div>
                                 <span class="tooltiptext_mode">Choose one from the two algorithms.</span>
                                 </div>
                             </div>
@@ -281,14 +281,14 @@
                         </div>
 
                         <div class="row">
-                        
+
                             <div class="trigger out_tab">
                                 <div class="tab  tooltip2" id="dataset-trigger">
                                     <div class="row row1" style="display:inline-block;">
-                                    <div style="display:inline-block;"><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/hhh.png")}}">
+                                    <div style="display:inline-block;"><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="images/hhh.png")}}">
                                     </div>
                                     <div style="display:inline-block; cursor: pointer; font-size: 25px; font-weight: bold; vertical-align:top;" id="clusize-text"> Cluster:</div>
-                                    </div> 
+                                    </div>
                                     <div class="row2 rowwidth" style="display:inline-block;">
                                             <form role="form">
                                                 <div class="form-group ">
@@ -297,26 +297,26 @@
                                                         <option type="radio" name="machine1" id="machine12" value="2" checked="" onchange="showclusize1()"> 2 machines</option>
                                                         <option type="radio" name="machine1" id="machine14" value="4" checked="" onchange="showclusize1()"> 4 machines</option>
                                                         <option type="radio" name="machine1" id="machine18" value="8" checked="" onchange="showclusize1()"> 8 machines</option>
-                                                    
-                                                    </select>	
-                                                </div>  
+
+                                                    </select>
+                                                </div>
                                             </form>
                                     </div>
                                     <span class="tooltiptext_mode">Choose the number of machines.</span>
                                 </div>
                             </div>
-                            
+
 
                             <div class="trigger out_tab">
                                 <div class="tab  tooltip2" id="dataset-trigger">
                                 <div class="row">
                                 <div class="row1" id="wl-trigger" style="display:inline-block;left: 10px;">
                                     <div class="row">
-                                    <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/wl.png")}}"></span>
+                                    <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/wl.png")}}"></span>
                                     <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="wl-text"> Workload:</span>
                                     </div>
                                 </div>
-                            
+
                                 <div class="row2" id="wlcontent" style="display:inline-block;">
                                     <label class="radio-inline">
                                         <ul class="list-inline">
@@ -327,11 +327,11 @@
                                 </div>
                                 <span class="tooltiptext_mode">Input the workload. The workload should be no larger than the upper bound!</span>
                                 </div>
-                            
-                            
-                            
-                            
-                            
+
+
+
+
+
                             </div>
                             <div class="trigger out_tab">
                                 <div class="tab  tooltip2" id="dataset-trigger">
@@ -339,7 +339,7 @@
                                         <div class="row row1" style="left: 10px;">
                                             <div id="nob-trigger" style="display:inline-block;">
                                                 <div class="row">
-                                                <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/nob.png")}}"></span>
+                                                <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/nob.png")}}"></span>
                                                 <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="nob-text"> Batches:</span>
                                                 </div>
                                             </div>
@@ -349,7 +349,7 @@
                                                         <select class="form-control" onchange="switchatom()" id="enatom">
                                                             <option type="radio" name="dataset" id="at1" value="Enable" checked="">Enable ATOM</option>
                                                             <option type="radio" name="dataset" id="at2" value="Disable" checked="">Disable ATOM</option>
-                                                        </select>	
+                                                        </select>
                                                     </div>
                                                 </form>
                                             </div>
@@ -361,13 +361,13 @@
                                         <div class="row row1" style="left: 10px;">
                                             <div id="nob-trigger" style="display:inline-block;">
                                                 <div class="row">
-                                                    <span><img class="img-responsive img-centered" onclick="switchmanual()" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/nob.png")}}"></span>
+                                                    <span><img class="img-responsive img-centered" onclick="switchmanual()" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/nob.png")}}"></span>
                                                     <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="nob-text"> Batches:</span>
                                                 </div>
                                             </div>
                                             <div class="row2" id="manuatom" style="display:inline-block;left: 173px;">
                                                 <input type="number" min="1" id="userbatchnumber" class="form-control rowwidth" value="10" onchange="checkbatchnumber()">
-                                            </div>  
+                                            </div>
                                         </div>
                                         <span class="tooltiptext_mode">Input the number of batches manually! Click the icon and you can switch back to ATOM!</span>
                                     </div>
@@ -376,22 +376,22 @@
                         </div>
                         <div class="row">
                             <button type="button" class="buttonlong button4" onclick="rockit()">Click Here and Run!</button>
-                   
-                    </div> 
+
+                    </div>
                 </div>
-            
-        
 
 
 
 
 
-     
+
+
+
             <div class="row" id="part_1" style="text-align: center">
-               
+
                     <div class="content">
                         <h3>Results from Training and Testing:</h3>
-                        
+
                     </div>
                     <div style="text-align: center">
                     <div class="row" style="text-align: center">
@@ -437,7 +437,7 @@
 
 
                     </div>
-           
+
                     <div class="row">
                         <div id="evaluation_table">
 
@@ -454,13 +454,13 @@
                                         <th scope="col">Time Cost</th>
                                     </tr>
                                     <tr>
-                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</th>
+                                        <th scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</th>
                                         <th scope="col">8192</th>
                                         <th scope="col">15388109 </th>
                                         <th scope="col">7481158</th>
                                         <th scope="col">2067</th>
                                     </tr>
-                                    
+
                                 </thead>
                                 <tbody id="table-body_graphd_eval">
                                 </tbody>
@@ -479,7 +479,7 @@
                                         <th scope="col">Time Cost</th>
                                     </tr>
                                     <tr>
-                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</th>
+                                        <th scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</th>
                                         <th scope="col">8192</th>
                                         <th scope="col">15388109 </th>
                                         <th scope="col">7481158</th>
@@ -493,7 +493,7 @@
                         </div>
                     </div>
                     </div>
-                
+
                 <hr>
 
             </div>
@@ -505,7 +505,7 @@
 
     <div class="row" id="white_space" style="height: 300px; background-color: white"></div>
 
-    
+
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll visible-xs visble-sm">
         <a class="btn btn-primary" href="#page-top" style="display: none;">
@@ -560,7 +560,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="{{url_for('static',filename="js/disappearMenu.js")}}"></script>
     <script type="text/javascript" "{{url_for('static',filename="js/params.json")}}"></script>
-   
+
 
 
 

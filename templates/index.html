@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-   
+
 
     <title>VC-Tune @ CUHKSZ</title>
 
@@ -16,12 +16,12 @@
     <link href="{{url_for('static',filename="css/main0.css")}}" rel="stylesheet">
     <link href="{{url_for('static',filename="css/lsm_button.css")}}" rel="stylesheet">
     <link href="{{url_for('static',filename="css/tooltip.css")}}" rel="stylesheet">
-    <link href="{{url_for('static',filename="css/wasteland.css")}}" rel="stylesheet">
+    <link href="{{url_for('static',filename="css/wastebusket.css")}}" rel="stylesheet">
 
     <!-- Custom JS
     <script async="" src="http://www.google-analytics.com/analytics.js"></script>-->
     <!-- <script src="js/autoRerun.js"></script> -->
-    <script src="{{url_for('static',filename="js/wasteland.js")}}"></script>
+    <script src="{{url_for('static',filename="js/wastebusket.js")}}"></script>
     <!--I added the last one above and the following 2 for the errro $ is not defined. But I am not sure they would always work. If it fails then go to stackoverflow for other headers.--></head><body id="page-top" class="index" data-new-gr-c-s-check-loaded="14.990.0" data-gr-ext-installed="">&gt;
     <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -111,15 +111,15 @@
     <!-- Header -->
     <header class="viewport" style=" margin-top: -20">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
                     <img class="img-responsive img-centered" src="{{url_for('static',filename="/images/CRDB.png")}}" alt="ATOM">
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-md-12">
                     <div class="intro-text">
-                        <span class="name">A Self-Designing Key-Value Store</span>
+                        <span class="name">VC-Tune</span>
                     </div>
                 </div>
             </div>
@@ -189,18 +189,15 @@
 
     <section id="interactiveDemo">
 
-        <div class="container page-scroll" style="width:2400px; transform: scale(0.8) translateX(-450px);">
+        <div class="container page-scroll" style="width:95%;text-align: center">
         <div class="row" id="environment_setting">
-            <div class="col-md-1 col-lg-1 col-xs-1"></div>
-            <div class="col-md-2 col-lg-2 col-xs-2 " style="padding-left: 0px;">
-                <div style="font-size: 25px; font-family: Helvetica; font-weight: bold">
-                    <h3 style="font-size:28px">Environment Setting:</h3>
-                    <p style="font-weight: normal; font-size:27px"> Set the parameters for dataset, system, algorithm, the cluster size, workload, and the number of batches. After choosing, hit the button below to see it run!</p>
 
-                </div>
+          <div class="content">
+            <div style="font-size: 25px; font-family: Helvetica; font-weight: bold">
+                <h3 style="font-size:28px">Environment Setting:</h3>
             </div>
 
-            <div class="col-md-9 col-lg-9 col-xs-9">
+          </div>
                 <div class="row">
 
                     <div class="trigger out_tab" >
@@ -208,7 +205,7 @@
                         <div class="tab  tooltip2" id="dataset-trigger">
                             <div class="row">
                                 <div class="row row1" style="display:inline-block;">
-                                <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/Align.png")}}">
+                                <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="images/Align.png")}}">
                                     </span>
                                 <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Dataset:</span>
                                 </div>
@@ -233,7 +230,7 @@
                         <div class="row">
                         <div id="sys-trigger" style="display:inline-block;">
                             <div class="row row1">
-                            <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/flow.png")}}"></span>
+                            <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/flow.png")}}"></span>
                             <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="systext"> Systems:</span>
                             </div>
                         </div>
@@ -243,8 +240,9 @@
                             <div class="form-group">
 
                                 <select class="form-control rowwidth"  onchange="switchtable(this)" id="chsys">
-                                    <option type="radio" name="graphd1" id="graphd11" value="graphd" checked="">GIRAPH</option>
-                                    <option type="radio" name="graphd1" id="graphd12" value="pregelplus" checked=""> PREGELPLUS</option>
+                                  <option selected="selected" type="radio" name="graphd1" id="graphd12" value="pregelplus" checked=""> PREGELPLUS</option>
+                                    <option type="radio" name="graphd1" id="graphd11" value="giraph" checked="">GIRAPH</option>
+
                                 </select>
                             </div>
                         </form>
@@ -258,7 +256,7 @@
                         <div class="tab  tooltip2" id="dataset-trigger">
                         <div class="row">
                             <div class="row row1" style="display:inline-block;">
-                            <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/filter.png")}}">
+                            <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="images/filter.png")}}">
                                 </span>
                             <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Algorithm:</span>
                             </div>
@@ -284,7 +282,7 @@
                     <div class="trigger out_tab">
                         <div class="tab  tooltip2" id="dataset-trigger">
                             <div class="row row1" style="display:inline-block;">
-                                <div style="display:inline-block;"><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/hhh.png")}}">
+                                <div style="display:inline-block;"><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="images/hhh.png")}}">
                                 </div>
                                 <div style="display:inline-block; cursor: pointer; font-size: 25px; font-weight: bold; vertical-align:top;" id="clusize-text"> Cluster:</div>
                             </div>
@@ -322,7 +320,7 @@
                         <div class="row">
                         <div class="row1" id="wl-trigger" style="display:inline-block;left: 10px;">
                             <div class="row">
-                            <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/wl.png")}}"></span>
+                            <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/wl.png")}}"></span>
                             <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="wl-text"> Workload:</span>
                             </div>
                         </div>
@@ -330,7 +328,7 @@
                         <div class="row2" id="wlcontent" style="display:inline-block;">
                             <label class="radio-inline">
                                 <ul class="list-inline">
-                                    <input type="number" id="workload" class="form-control rowwidth" value="2000" onchange="checkworkload()">
+                                    <input type="number" id="workload" class="form-control rowwidth" value=8192 onchange="checkworkload()">
                                 </ul>
                             </label>
                         </div>
@@ -344,7 +342,7 @@
                             <div class="row">
                                 <div class="row1" id="wl-trigger" style="display:inline-block;left: 10px;">
                                     <div class="row">
-                                        <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/memory.png")}}"></span>
+                                        <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/memory.png")}}"></span>
                                         <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="wl-text"> Memory:</span>
                                     </div>
                                 </div>
@@ -404,20 +402,19 @@
                     -->
                 </div>
 
-            </div>
         </div>
 
 
 
         <div class="row" id="part_2">
-            <div class="col-md-1 col-lg-1 col-xs-1"  style="width: 840px; text-align: left; margin-left: calc(50% - 880px); margin-top:40px; margin-right: 40px;">
-                <div class="col-md-9 col-lg-9 col-xs-9" style="width: 840px;">
-                    <div class="trigger out_tab row" style="width: 500px;">
+            <div class="col-md-1 col-lg-1 col-xs-1"  style="width: 550px; text-align: left; margin-left: calc(50% - 730px); margin-top:40px; margin-right: 40px;">
+                <div class="col-md-9 col-lg-9 col-xs-9" style="width: 100%">
+                    <div class="trigger out_tab row">
                         <div class="tab  tooltip2" id="dataset-trigger">
                             <div class="row">
                                 <div class="row1" id="wl-trigger" style="display:inline-block;left: 10px;">
                                     <div class="row">
-                                        <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/nob.png")}}"></span>
+                                        <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/nob.png")}}"></span>
                                         <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="wl-text"> Batches:</span>
                                     </div>
                                 </div>
@@ -436,13 +433,13 @@
                             +
                         </div>
                     </div>
-                    <div id="batch_inputs" style="width:840px;margin-bottom: 10px; margin-top: 15px; padding-left: 10px"></div>
+                    <div id="batch_inputs" style="width:95%;margin-bottom: 10px; margin-top: 15px; padding-left: 10px"></div>
                 </div>
                 <div id="batch_table">
 
                 </div>
             </div>
-            <div class="col-md-1 col-lg-1 col-xs-1" id="plot_1" style="width: 881px; height: 490px; text-align: left; padding: 15px; border: 4px solid #666666; border-radius: 15px; margin-top: 20px; margin-left: 40px">
+            <div class="col-md-1 col-lg-1 col-xs-1" id="plot_1" style="width: 50%; height: 490px; text-align: left; padding: 5px; border: 4px solid #666666; border-radius: 15px; margin-top: 20px; margin-left: 40px">
 
             </div>
 
@@ -454,7 +451,7 @@
 
     <div class="row" id="white_space" style="height: 300px; background-color: white"></div>
 
-    
+
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll visible-xs visble-sm">
         <a class="btn btn-primary" href="#page-top" style="display: none;">
@@ -509,7 +506,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="{{url_for('static',filename="js/disappearMenu.js")}}"></script>
     <script type="text/javascript" "{{url_for('static',filename="js/params.json")}}"></script>
-   
+
 
 
 
