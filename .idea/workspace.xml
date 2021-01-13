@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="962c27d0-9566-4dee-b5a2-80f892b0594c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/wasteland.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/wasteland.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
@@ -22,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="357" column="132" selection-start-line="357" selection-start-column="132" selection-end-line="357" selection-end-column="132" />
+            <state relative-caret-position="688">
+              <caret line="170" column="57" selection-start-line="170" selection-start-column="57" selection-end-line="170" selection-end-column="57" />
               <folding>
                 <element signature="e#42248#44518#0" expanded="true" />
               </folding>
@@ -72,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/wasteland.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="471" column="20" selection-start-line="471" selection-start-column="20" selection-end-line="471" selection-end-column="20" />
+            <state relative-caret-position="297">
+              <caret line="572" column="29" selection-start-line="572" selection-start-column="29" selection-end-line="572" selection-end-column="29" />
               <folding>
                 <element signature="e#175#7928#0" />
                 <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
@@ -108,6 +106,7 @@
       <find>success</find>
       <find>click</find>
       <find>memor</find>
+      <find>memory</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,8 +117,8 @@
       <list>
         <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/static/css/lsm_button.css" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/js/wasteland.js" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -208,12 +207,12 @@
       <workItem from="1610271459462" duration="16555000" />
       <workItem from="1610454368320" duration="1460000" />
       <workItem from="1610458722545" duration="2163000" />
-      <workItem from="1610510207056" duration="966000" />
+      <workItem from="1610510207056" duration="1496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37018000" />
+    <option name="totallyTimeSpent" value="37548000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -286,18 +285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/main changed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/loader.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/plotly.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -308,26 +295,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/static/js/loader.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/main changed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="357" column="132" selection-start-line="357" selection-start-column="132" selection-end-line="357" selection-end-column="132" />
+        <state>
           <folding>
-            <element signature="e#42248#44518#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/wasteland.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="471" column="20" selection-start-line="471" selection-start-column="20" selection-end-line="471" selection-end-column="20" />
+        <state relative-caret-position="297">
+          <caret line="572" column="29" selection-start-line="572" selection-start-column="29" selection-end-line="572" selection-end-column="29" />
           <folding>
             <element signature="e#175#7928#0" />
             <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="170" column="57" selection-start-line="170" selection-start-column="57" selection-end-line="170" selection-end-column="57" />
+          <folding>
+            <element signature="e#42248#44518#0" expanded="true" />
           </folding>
         </state>
       </provider>

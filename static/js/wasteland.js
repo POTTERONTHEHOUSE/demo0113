@@ -570,7 +570,7 @@ function plot_batch(batch_array){
             pad: 0
         },
         yaxis: {
-            title: 'Memory Usage (GB)'
+            title: 'Estimated Memory Usage (GB)'
         },
         xaxis: {
             title: 'Workload Metric',
