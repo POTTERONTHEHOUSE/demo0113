@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-   
+
 
     <title>VC-Tune @ CUHKSZ</title>
 
@@ -31,7 +31,7 @@
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="{{url_for('static',filename="js/plotly.js")}}"></script>
-  
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Reenie+Beanie|Rock+Salt|Indie+Flower" rel="stylesheet" type="text/css">
@@ -105,7 +105,7 @@
         <div class="container">
             <!-- <div class="row">
                 <div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
-                    <img class="img-responsive img-centered" src="{{url_for('static',filename="/images/CRDB.png")}}" alt="ATOM">
+                    <img class="img-responsive img-centered" src="{{url_for('static',filename="images/CRDB.png")}}" alt="ATOM">
                 </div>
             </div> -->
             <div class="row">
@@ -182,26 +182,26 @@
     <section id="interactiveDemo">
 
         <div class="container page-scroll" style="width:95%;text-align: center">
-            
+
                 <div class="row" id="environment_setting">
-               
+
                         <div class="content">
                             <h3>Environment Setting:</h3>
-                        
+
                         </div>
-                 
-                    
-                   
+
+
+
                         <div class="row">
 
                             <div class="trigger out_tab" >
-                                
+
                                 <div class="tab  tooltip2" id="dataset-trigger">
                                     <div class="row">
                                         <div class="row row1" style="display:inline-block;">
-                                        <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/Align.png")}}">
+                                        <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="images/Align.png")}}">
                                             </span>
-                                        <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Dataset:</span> 
+                                        <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Dataset:</span>
                                         </div>
                                         <div class="row2" id="datasetcontent" style="display:inline-block;">
                                             <form role="form">
@@ -209,22 +209,22 @@
                                                     <select class="form-control" id="chdataset">
                                                         <option type="radio" name="dataset" id="dataset1" value="web" checked="">WEB</option>
                                                         <option type="radio" name="dataset" id="dataset2" value="dblp" checked="">DBLP</option>
-                                                    </select>	
+                                                    </select>
                                                 </div>
                                             </form>
                                         </div>
-                                    </div> 
+                                    </div>
                                     <span class="tooltiptext_mode">Choose one from the two datasets.</span>
                                 </div>
                             </div>
-                            
+
 
                             <div class="trigger out_tab" >
                                 <div class=" tab tooltip2" id="dataset-trigger">
                                 <div class="row">
                                 <div id="sys-trigger" style="display:inline-block;">
                                     <div class="row row1">
-                                    <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/flow.png")}}"></span>
+                                    <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/flow.png")}}"></span>
                                     <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="systext"> Systems:</span>
                                     </div>
                                 </div>
@@ -232,13 +232,13 @@
                                 <div class="row2" id="syscontent" style="display:inline-block;">
                                 <form role="form">
                                     <div class="form-group">
-                                        
+
                                         <select class="form-control rowwidth"  onchange="switchtable(this)" id="chsys">
                                             <option selected="selected" type="radio" name="graphd1" id="graphd12" value="pregelplus" checked=""> PREGELPLUS</option>
                                             <option type="radio" name="graphd1" id="graphd11" value="graphd" checked="">GRAPHD</option>
 
                                             <option type="radio" name="graphd1" id="graphd12" value="pregelplus" checked="">GIRAPH</option>
-                                        </select>	
+                                        </select>
                                     </div>
                                 </form>
                                 </div>
@@ -246,14 +246,14 @@
                                 <span class="tooltiptext_mode">Choose one from the two systems.</span>
                             </div>
                             </div>
-            
+
                             <div class="trigger out_tab">
                                 <div class="tab  tooltip2" id="dataset-trigger">
                                 <div class="row">
                                     <div class="row row1" style="display:inline-block;">
-                                    <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/filter.png")}}">
+                                    <span><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="images/filter.png")}}">
                                         </span>
-                                    <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Algorithm:</span> 
+                                    <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="data-text"> Algorithm:</span>
                                     </div>
                                     <div class="row2" id="algcontent" style="display:inline-block;">
                                         <form role="form">
@@ -261,11 +261,11 @@
                                                 <select class="form-control rowwidth" id="chalg">
                                                     <option type="radio" name="algo1" id="algo11" value="mssp" checked=""> MSSP</option>
                                                     <option type="radio" name="algo1" id="algo12" value="ppr" checked=""> PPR</option>
-                                                </select>	
+                                                </select>
                                             </div>
                                         </form>
                                     </div>
-                                </div> 
+                                </div>
                                 <span class="tooltiptext_mode">Choose one from the two algorithms.</span>
                                 </div>
                             </div>
@@ -273,14 +273,14 @@
                         </div>
 
                         <div class="row">
-                        
+
                             <div class="trigger out_tab">
                                 <div class="tab  tooltip2" id="dataset-trigger">
                                     <div class="row row1" style="display:inline-block;">
-                                    <div style="display:inline-block;"><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="/images/hhh.png")}}">
+                                    <div style="display:inline-block;"><img class="img-responsive img-centered" style="width:40px;display:inline-block;" src="{{url_for('static',filename="images/hhh.png")}}">
                                     </div>
                                     <div style="display:inline-block; cursor: pointer; font-size: 25px; font-weight: bold; vertical-align:top;" id="clusize-text"> Cluster:</div>
-                                    </div> 
+                                    </div>
                                     <div class="row2 rowwidth" style="display:inline-block;">
                                             <form role="form">
                                                 <div class="form-group ">
@@ -289,26 +289,26 @@
                                                         <option type="radio" name="machine1" id="machine12" value="2" checked="" onchange="showclusize1()"> 2 machines</option>
                                                         <option type="radio" name="machine1" id="machine14" value="4" checked="" onchange="showclusize1()"> 4 machines</option>
                                                         <option type="radio" name="machine1" id="machine18" value="8" checked="" onchange="showclusize1()"> 8 machines</option>
-                                                    
-                                                    </select>	
-                                                </div>  
+
+                                                    </select>
+                                                </div>
                                             </form>
                                     </div>
                                     <span class="tooltiptext_mode">Choose the number of machines.</span>
                                 </div>
                             </div>
-                            
+
 
                             <div class="trigger out_tab">
                                 <div class="tab  tooltip2" id="dataset-trigger">
                                 <div class="row">
                                 <div class="row1" id="wl-trigger" style="display:inline-block;left: 10px;">
                                     <div class="row">
-                                    <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/wl.png")}}"></span>
+                                    <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/wl.png")}}"></span>
                                     <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="wl-text"> Workload:</span>
                                     </div>
                                 </div>
-                            
+
                                 <div class="row2" id="wlcontent" style="display:inline-block;">
                                     <label class="radio-inline">
                                         <ul class="list-inline">
@@ -319,11 +319,11 @@
                                 </div>
                                 <span class="tooltiptext_mode">Input the workload. The workload should be no larger than the upper bound!</span>
                                 </div>
-                            
-                            
-                            
-                            
-                            
+
+
+
+
+
                             </div>
                             <div class="trigger out_tab">
                                 <div class="tab  tooltip2" id="dataset-trigger">
@@ -331,7 +331,7 @@
                                         <div class="row row1" style="left: 10px;">
                                             <div id="nob-trigger" style="display:inline-block;">
                                                 <div class="row">
-                                                <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/nob.png")}}"></span>
+                                                <span><img class="img-responsive img-centered" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/nob.png")}}"></span>
                                                 <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="nob-text"> Batches:</span>
                                                 </div>
                                             </div>
@@ -341,7 +341,7 @@
                                                         <select class="form-control" onchange="switchatom()" id="enatom">
                                                             <option type="radio" name="dataset" id="at1" value="Enable" checked="">Enable ATOM</option>
                                                             <option type="radio" name="dataset" id="at2" value="Disable" checked="">Disable ATOM</option>
-                                                        </select>	
+                                                        </select>
                                                     </div>
                                                 </form>
                                             </div>
@@ -353,13 +353,13 @@
                                         <div class="row row1" style="left: 10px;">
                                             <div id="nob-trigger" style="display:inline-block;">
                                                 <div class="row">
-                                                    <span><img class="img-responsive img-centered" onclick="switchmanual()" style="width:40px; display:inline-block;" src="{{url_for('static',filename="/images/nob.png")}}"></span>
+                                                    <span><img class="img-responsive img-centered" onclick="switchmanual()" style="width:40px; display:inline-block;" src="{{url_for('static',filename="images/nob.png")}}"></span>
                                                     <span style="cursor: pointer; font-size: 25px; font-weight: bold;" id="nob-text"> Batches:</span>
                                                 </div>
                                             </div>
                                             <div class="row2" id="manuatom" style="display:inline-block;left: 173px;">
                                                 <input type="number" min="1" id="userbatchnumber" class="form-control rowwidth" value="10" onchange="checkbatchnumber()">
-                                            </div>  
+                                            </div>
                                         </div>
                                         <span class="tooltiptext_mode">Input the number of batches manually! Click the icon and you can switch back to ATOM!</span>
                                     </div>
@@ -368,22 +368,22 @@
                         </div>
                         <div class="row">
                             <button type="button" class="buttonlong button4" onclick="rockit()">Click Here and Run!</button>
-                   
-                    </div> 
+
+                    </div>
                 </div>
-            
-        
 
 
 
 
 
-     
+
+
+
             <div class="row" id="part_1" style="text-align: center">
-               
+
                     <div class="content">
                         <h3>Results from Training and Testing:</h3>
-                        
+
                     </div>
                     <div style="text-align: center">
                     <div class="row" style="text-align: center">
@@ -394,62 +394,69 @@
                                 <caption>Training Phase</caption>
                                 <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">State</th>
-                                    <th scope="col">Workload</th>
-                                    <th scope="col">maxHWM</th>
-                                    <th scope="col">maxRSS</th>
-                                    <th scope="col">Time Cost</th>
+                                  <th scope="col">State</th>
+                                  <th scope="col">Workload</th>
+                                  <th scope="col">maxHWM (kB)</th>
+                                  <th scope="col">maxRSS (kB)</th>
+                                  <th scope="col">Time Cost (s)</th>
+                                  <th scope="col">Accumulated Time Cost (s)</th>
                                 </tr>
                                 <tr>
-                                    <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</th>
-                                    <th scope="col">32</th>
-                                    <th scope="col">215315</th>
-                                    <th scope="col">189028</th>
-                                    <th scope="col">28</th>
+                                    <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</td>
+                                    <td scope="col">32</td>
+                                    <td scope="col">146036</td>
+                                    <td scope="col">136674</td>
+                                    <td scope="col">28</td>
+                                    <td scope="col">28</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch2</th>
-                                    <th scope="col">64</th>
-                                    <th scope="col">215315</th>
-                                    <th scope="col">189028</th>
-                                    <th scope="col">38</th>
+                                    <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch2</td>
+                                    <td scope="col">64</td>
+                                    <td scope="col">215315</td>
+                                    <td scope="col">189028</td>
+                                    <td scope="col">38</td>
+                                    <td scope="col">66</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch3</th>
-                                    <th scope="col">128</th>
-                                    <th scope="col">387273</th>
-                                    <th scope="col">301193</th>
-                                    <th scope="col">40</th>
+                                    <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch3</td>
+                                    <td scope="col">128</td>
+                                    <td scope="col">387273</td>
+                                    <td scope="col">301193</td>
+                                    <td scope="col">40</td>
+                                    <td scope="col">106</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch4</th>
-                                    <th scope="col">256</th>
-                                    <th scope="col">691674</th>
-                                    <th scope="col">454580</th>
-                                    <th scope="col">62</th>
+                                    <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch4</td>
+                                    <td scope="col">256</td>
+                                    <td scope="col">691674</td>
+                                    <td scope="col">454580</td>
+                                    <td scope="col">62</td>
+                                    <td scope="col">168</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch5</th>
-                                    <th scope="col">512</th>
-                                    <th scope="col">1138281</th>
-                                    <th scope="col">748296</th>
-                                    <th scope="col">109</th>
+                                    <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch5</td>
+                                    <td scope="col">512</td>
+                                    <td scope="col">1138281</td>
+                                    <td scope="col">748296</td>
+                                    <td scope="col">109</td>
+                                    <td scope="col">277</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch6</th>
-                                    <th scope="col">1024</th>
-                                    <th scope="col">2069737</th>
-                                    <th scope="col">1223983</th>
-                                    <th scope="col">198</th>
+                                    <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch6</td>
+                                    <td scope="col">1024</td>
+                                    <td scope="col">2069737</td>
+                                    <td scope="col">1223983</td>
+                                    <td scope="col">198</td>
+                                    <td scope="col">475</td>
                                 </tr>
                                 <tr>
-                                    <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch7</th>
-                                    <th scope="col">2048</th>
-                                    <th scope="col">3981748</th>
-                                    <th scope="col">2094495</th>
-                                    <th scope="col">380</th>
+                                    <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch7</td>
+                                    <td scope="col">2048</th>
+                                    <td scope="col">3981748</td>
+                                    <td scope="col">2094495</td>
+                                    <td scope="col">380</td>
+                                    <td scope="col">855</td>
                                 </tr>
-
                                 </thead>
                                 <tbody id="table-body_pregelplus_tra">
                                 </tbody>
@@ -463,58 +470,66 @@
                                     <tr>
                                         <th scope="col">State</th>
                                         <th scope="col">Workload</th>
-                                        <th scope="col">maxHWM</th>
-                                        <th scope="col">maxRSS</th>
-                                        <th scope="col">Time Cost</th>
+                                        <th scope="col">maxHWM (kB)</th>
+                                        <th scope="col">maxRSS (kB)</th>
+                                        <th scope="col">Time Cost (s)</th>
+                                        <th scope="col">Accumulated Time Cost (s)</th>
                                     </tr>
                                     <tr>
-                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</th>
-                                        <th scope="col">32</th>
-                                        <th scope="col">215315</th>
-                                        <th scope="col">189028</th>
-                                        <th scope="col">28</th>
+                                        <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</td>
+                                        <td scope="col">32</td>
+                                        <td scope="col">146036</td>
+                                        <td scope="col">136674</td>
+                                        <td scope="col">28</td>
+                                        <td scope="col">28</td>
                                     </tr>
                                     <tr>
-                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch2</th>
-                                        <th scope="col">64</th>
-                                        <th scope="col">215315</th>
-                                        <th scope="col">189028</th>
-                                        <th scope="col">38</th>
+                                        <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch2</td>
+                                        <td scope="col">64</td>
+                                        <td scope="col">215315</td>
+                                        <td scope="col">189028</td>
+                                        <td scope="col">38</td>
+                                        <td scope="col">66</td>
                                     </tr>
                                     <tr>
-                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch3</th>
-                                        <th scope="col">128</th>
-                                        <th scope="col">387273</th>
-                                        <th scope="col">301193</th>
-                                        <th scope="col">40</th>
+                                        <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch3</td>
+                                        <td scope="col">128</td>
+                                        <td scope="col">387273</td>
+                                        <td scope="col">301193</td>
+                                        <td scope="col">40</td>
+                                        <td scope="col">106</td>
                                     </tr>
                                     <tr>
-                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch4</th>
-                                        <th scope="col">256</th>
-                                        <th scope="col">691674</th>
-                                        <th scope="col">454580</th>
-                                        <th scope="col">62</th>
+                                        <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch4</td>
+                                        <td scope="col">256</td>
+                                        <td scope="col">691674</td>
+                                        <td scope="col">454580</td>
+                                        <td scope="col">62</td>
+                                        <td scope="col">168</td>
                                     </tr>
                                     <tr>
-                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch5</th>
-                                        <th scope="col">512</th>
-                                        <th scope="col">1138281</th>
-                                        <th scope="col">748296</th>
-                                        <th scope="col">109</th>
+                                        <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch5</td>
+                                        <td scope="col">512</td>
+                                        <td scope="col">1138281</td>
+                                        <td scope="col">748296</td>
+                                        <td scope="col">109</td>
+                                        <td scope="col">277</td>
                                     </tr>
                                     <tr>
-                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch6</th>
-                                        <th scope="col">1024</th>
-                                        <th scope="col">2069737</th>
-                                        <th scope="col">1223983</th>
-                                        <th scope="col">198</th>
+                                        <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch6</td>
+                                        <td scope="col">1024</td>
+                                        <td scope="col">2069737</td>
+                                        <td scope="col">1223983</td>
+                                        <td scope="col">198</td>
+                                        <td scope="col">475</td>
                                     </tr>
                                     <tr>
-                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch7</th>
-                                        <th scope="col">2048</th>
-                                        <th scope="col">3981748</th>
-                                        <th scope="col">2094495</th>
-                                        <th scope="col">380</th>
+                                        <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch7</td>
+                                        <td scope="col">2048</th>
+                                        <td scope="col">3981748</td>
+                                        <td scope="col">2094495</td>
+                                        <td scope="col">380</td>
+                                        <td scope="col">855</td>
                                     </tr>
                             </thead>
                             <tbody id="table-body_graphd_tra">
@@ -526,7 +541,7 @@
 
 
                     </div>
-           
+
                     <div class="row">
                         <div id="evaluation_table">
 
@@ -536,25 +551,28 @@
                                 <caption>Evaluation Phase</caption>
                                     <thead class="thead-light">
                                         <tr>
-                                            <th scope="col">State</th>
-                                            <th scope="col">Workload</th>
-                                            <th scope="col">maxHWM</th>
-                                            <th scope="col">maxRSS</th>
-                                            <th scope="col">Time Cost</th>
+                                          <th scope="col">State</th>
+                                          <th scope="col">Workload</th>
+                                          <th scope="col">maxHWM (kB)</th>
+                                          <th scope="col">maxRSS (kB)</th>
+                                          <th scope="col">Time Cost (s)</th>
+                                          <th scope="col">Accumulated Time Cost (s)</th>
                                         </tr>
                                         <tr>
-                                            <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</th>
-                                            <th scope="col">6060</th>
-                                            <th scope="col">12157400</th>
-                                            <th scope="col">5559492</th>
-                                            <th scope="col">1115</th>
+                                            <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</td>
+                                            <td scope="col">6060</td>
+                                            <td scope="col">12157400</td>
+                                            <td scope="col">5559492</td>
+                                            <td scope="col">1115</td>
+                                            <td scope="col">1115</td>
                                         </tr>
                                         <tr>
-                                            <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch2</th>
-                                            <th scope="col">2132</th>
-                                            <th scope="col">12157400</th>
-                                            <th scope="col">7122627</th>
-                                            <th scope="col">377</th>
+                                            <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch2</td>
+                                            <td scope="col">2132</td>
+                                            <td scope="col">12157400</td>
+                                            <td scope="col">7122627</td>
+                                            <td scope="col">377</td>
+                                            <td scope="col">1492</td>
                                         </tr>
                                     </thead>
                                 <tbody id="table-body_graphd_eval">
@@ -567,25 +585,28 @@
                                 <caption>Evaluation Phase</caption>
                                 <thead class="thead-light">
                                     <tr>
-                                        <th scope="col">State</th>
-                                        <th scope="col">Workload</th>
-                                        <th scope="col">maxHWM</th>
-                                        <th scope="col">maxRSS</th>
-                                        <th scope="col">Time Cost</th>
+                                      <th scope="col">State</th>
+                                      <th scope="col">Workload</th>
+                                      <th scope="col">maxHWM (kB)</th>
+                                      <th scope="col">maxRSS (kB)</th>
+                                      <th scope="col">Time Cost (s)</th>
+                                      <th scope="col">Accumulated Time Cost (s)</th>
                                     </tr>
                                     <tr>
-                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</th>
-                                        <th scope="col">6060</th>
-                                        <th scope="col">12157400</th>
-                                        <th scope="col">5559492</th>
-                                        <th scope="col">1115</th>
+                                        <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch1</td>
+                                        <td scope="col">6060</td>
+                                        <td scope="col">12157400</td>
+                                        <td scope="col">5559492</td>
+                                        <td scope="col">1115</td>
+                                        <td scope="col">1115</td>
                                     </tr>
                                     <tr>
-                                        <th scope="col"><img src="{{url_for('static',filename="/images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch2</th>
-                                        <th scope="col">2132</th>
-                                        <th scope="col">12157400</th>
-                                        <th scope="col">7122627</th>
-                                        <th scope="col">377</th>
+                                        <td scope="col"><img src="{{url_for('static',filename="images/check4.png")}}" style="width:20px;margin-right:10px; float:left;"/> Batch2</td>
+                                        <td scope="col">2132</td>
+                                        <td scope="col">12157400</td>
+                                        <td scope="col">7122627</td>
+                                        <td scope="col">377</td>
+                                        <td scope="col">1492</td>
                                     </tr>
                                     </thead>
                                 <tbody id="table-body_pregelplus_eval">
@@ -595,7 +616,7 @@
                         </div>
                     </div>
                     </div>
-               
+
 
 
 
@@ -614,7 +635,7 @@
 
     <div class="row" id="white_space" style="height: 300px; background-color: white"></div>
 
-    
+
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll visible-xs visble-sm">
         <a class="btn btn-primary" href="#page-top" style="display: none;">
@@ -669,7 +690,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="{{url_for('static',filename="js/disappearMenu.js")}}"></script>
     <script type="text/javascript" "{{url_for('static',filename="js/params.json")}}"></script>
-   
+
 
 
 
